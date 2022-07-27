@@ -7,6 +7,7 @@ TagManager:
   - Obstacle
   - Enemy
   - Ground
+  - Platform
   layers:
   - Default
   - TransparentFX
@@ -16,30 +17,30 @@ TagManager:
   - UI
   - Foreground
   - Environment
+  - 
+  - Platforms
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   - Entities
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
   m_SortingLayers:
   - name: Background
     uniqueID: 2380830439

@@ -41,6 +41,9 @@ public class CharacterController2D : MonoBehaviour
 
 		if (OnCrouchEvent == null)
 			OnCrouchEvent = new BoolEvent();
+
+		QualitySettings.vSyncCount = 0;
+		Application.targetFrameRate = 300;
 	}
 
 	private void FixedUpdate()

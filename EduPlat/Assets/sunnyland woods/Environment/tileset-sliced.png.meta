@@ -719,7 +719,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 15
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -747,7 +747,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
@@ -759,9 +759,21 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -5645,6 +5657,7 @@ TextureImporter:
       tileset-sliced_55: 21300110
       tileset-sliced_69: 21300138
       tileset-sliced_47: 21300094
+      tileset-sliced_115: 21300230
       tileset-sliced_118: 21300236
       tileset-sliced_5: 21300010
       tileset-sliced_117: 21300234
@@ -5652,11 +5665,10 @@ TextureImporter:
       tileset-sliced_50: 21300100
       tileset-sliced_148: 21300296
       tileset-sliced_221: 21300442
-      tileset-sliced_115: 21300230
+      tileset-sliced_192: 21300384
       tileset-sliced_183: 21300366
       tileset-sliced_30: 21300060
       tileset-sliced_99: 21300198
-      tileset-sliced_192: 21300384
       tileset-sliced_108: 21300216
       tileset-sliced_168: 21300336
       tileset-sliced_84: 21300168

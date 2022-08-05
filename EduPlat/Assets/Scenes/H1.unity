@@ -1354,6 +1354,7 @@ GameObject:
   m_Component:
   - component: {fileID: 118425170}
   - component: {fileID: 118425169}
+  - component: {fileID: 118425171}
   m_Layer: 31
   m_Name: opossum-1 (1)
   m_TagString: Enemy
@@ -1420,14 +1421,48 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 118425168}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 88.16, y: -25.9, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 24.747375, y: 3.602312, z: 0.5466236}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_Father: {fileID: 169369157}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &118425171
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118425168}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.4, y: 1.8666667}
+    newSize: {x: 2.4, y: 1.8666667}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -1, y: 0.9333334}
+      - {x: -1.1333334, y: 0.86666673}
+      - {x: -1.2, y: 0.73333335}
+      - {x: -1.2, y: -0.8000001}
+      - {x: -1.0666667, y: -0.9333334}
+      - {x: 0.40000004, y: -0.9333334}
+      - {x: 0.86666673, y: -0.6666667}
+      - {x: 0.86666673, y: 0.73333335}
+      - {x: 0.8000001, y: 0.9333334}
 --- !u!1 &118514508
 GameObject:
   m_ObjectHideFlags: 0
@@ -1863,7 +1898,9 @@ Transform:
   m_LocalPosition: {x: 63.41263, y: -29.502312, z: -0.5466236}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 789522229}
+  - {fileID: 118425170}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12617,6 +12654,7 @@ GameObject:
   m_Component:
   - component: {fileID: 789522229}
   - component: {fileID: 789522228}
+  - component: {fileID: 789522230}
   m_Layer: 31
   m_Name: opossum-1
   m_TagString: Enemy
@@ -12683,14 +12721,48 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 789522227}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 63.5, y: -26.08, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.087371826, y: 3.4223118, z: 0.5466236}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_Father: {fileID: 169369157}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &789522230
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789522227}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.4, y: 1.8666667}
+    newSize: {x: 2.4, y: 1.8666667}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -1, y: 0.9333334}
+      - {x: -1.1333334, y: 0.86666673}
+      - {x: -1.2, y: 0.73333335}
+      - {x: -1.2, y: -0.8000001}
+      - {x: -1.0666667, y: -0.9333334}
+      - {x: 0.40000004, y: -0.9333334}
+      - {x: 0.86666673, y: -0.6666667}
+      - {x: 0.86666673, y: 0.73333335}
+      - {x: 0.8000001, y: 0.9333334}
 --- !u!1 &789529435
 GameObject:
   m_ObjectHideFlags: 0
@@ -16295,7 +16367,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1181846222
 GameObject:
@@ -74406,7 +74478,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1973530932
 Transform:
   m_ObjectHideFlags: 0

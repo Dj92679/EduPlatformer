@@ -77,7 +77,7 @@ public class PossumAI : MonoBehaviour
             //Check if we are at the end of the line (make the change +1)
             if (nextID == 0)
                 idChangeValue = 1;
-
+            //Apply the change on the nextID
             nextID += idChangeValue;
 
 

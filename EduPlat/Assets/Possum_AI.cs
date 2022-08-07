@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PossumAI : MonoBehaviour
+public class Possum_AI : MonoBehaviour
 {
     //reference to waypoints
     public List<Transform> points;
@@ -20,7 +20,7 @@ public class PossumAI : MonoBehaviour
     }
 
     //AI Script
-   private void Init()
+    private void Init()
     {
         GetComponent<PolygonCollider2D>().isTrigger = true;
         //Create Root Object
@@ -48,11 +48,11 @@ public class PossumAI : MonoBehaviour
         points = new List<Transform>();
         points.Add(p1.transform);
         points.Add(p2.transform);
-        
+
 
     }
 
-    
+
     private void Update()
     {
         MoveToNextPoint();
@@ -67,9 +67,9 @@ public class PossumAI : MonoBehaviour
         else
             transform.localScale = new Vector3(-1, 1, 1);
         //Move the enemy towards the zone
-        transform.position = Vector2.MoveTowards(transform.position, goalPoint.position,speed*Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, goalPoint.position, speed * Time.deltaTime);
         //Check the distance between the distance between enemy and goal point to trigger next point
-        if(Vector2.Distance(transform.position, goalPoint.position) < 1f)
+        if (Vector2.Distance(transform.position, goalPoint.position) < 1f)
         {
             //Check if we are at the end of the line (make the change -1)
             if (nextID == points.Count - 1)
@@ -85,8 +85,4 @@ public class PossumAI : MonoBehaviour
         }
 
     }
-
-
-
-
 }

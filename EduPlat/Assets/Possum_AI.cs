@@ -63,9 +63,9 @@ public class Possum_AI : MonoBehaviour
         Transform goalPoint = points[nextID];
         //Flip Enemy Sprite
         if (goalPoint.transform.position.x > transform.position.x)
-            transform.localScale = new Vector3(1, 1, 1);
-        else
             transform.localScale = new Vector3(-1, 1, 1);
+        else
+            transform.localScale = new Vector3(1, 1, 1);
         //Move the enemy towards the zone
         transform.position = Vector2.MoveTowards(transform.position, goalPoint.position, speed * Time.deltaTime);
         //Check the distance between the distance between enemy and goal point to trigger next point

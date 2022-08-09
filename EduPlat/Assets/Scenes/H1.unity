@@ -20929,7 +20929,7 @@ MonoBehaviour:
   - {fileID: 1133962592}
   - {fileID: 1657557826}
   nextID: 0
-  speed: 10
+  speed: 5
 --- !u!60 &1676056024
 PolygonCollider2D:
   m_ObjectHideFlags: 0

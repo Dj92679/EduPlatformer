@@ -2552,7 +2552,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 509837451}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -73.8, y: -21.5, z: -10}
+  m_LocalPosition: {x: -67.55573, y: -21.56828, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3026,7 +3026,7 @@ GameObject:
   m_Component:
   - component: {fileID: 667339189}
   - component: {fileID: 667339190}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: Confiner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3076,9 +3076,9 @@ PolygonCollider2D:
     - - {x: 154.36406, y: 20.722464}
       - {x: 154.83347, y: 48.065685}
       - {x: -136.7381, y: 45.85281}
-      - {x: -136.90099, y: -12.035324}
-      - {x: 51.824265, y: -11.869562}
-      - {x: 43.366627, y: 17.829134}
+      - {x: -137.33768, y: -8.978439}
+      - {x: 36.539856, y: -8.375986}
+      - {x: 38.562946, y: 20.012623}
 --- !u!1 &687617084
 GameObject:
   m_ObjectHideFlags: 0
@@ -72176,6 +72176,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1096473209}
   - component: {fileID: 1096473208}
+  - component: {fileID: 1096473210}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -72229,7 +72230,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1096473207}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -6.2442703, y: 0.06827927, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -72237,6 +72238,23 @@ Transform:
   m_Father: {fileID: 509837454}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1096473210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096473207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2fba25a5cd15594e8f050a11e386c80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ConfineMode: 0
+  m_BoundingVolume: {fileID: 0}
+  m_BoundingShape2D: {fileID: 667339190}
+  m_ConfineScreenEdges: 1
+  m_Damping: 0
 --- !u!1 &1101549613
 GameObject:
   m_ObjectHideFlags: 0

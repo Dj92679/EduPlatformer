@@ -1,11 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PlayerMovement : MonoBehaviour
 {
     public CharacterController2D controller;
     public Animator animator;
+    private Rigidbody2D rb;
 
     public float runSpeed = 40f;
 
@@ -15,12 +15,17 @@ public class PlayerMovement : MonoBehaviour
 
     bool crouch = false;
 
+
     // Update is called once per frame
     void Update()
     {
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+
+        rb = GetComponent<Rigidbody2D>();
+
+        animator.SetFloat("Velocity", rb.velocity.y);
 
         if (Input.GetButtonDown("Jump"))
         {
@@ -31,9 +36,10 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Crouch"))
         {
             crouch = true;
-        } else if (Input.GetButtonUp("Crouch"))
+        }
+        else if (Input.GetButtonUp("Crouch"))
         {
-            crouch= false;
+            crouch = false;
         }
     }
 

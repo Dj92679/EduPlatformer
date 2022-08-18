@@ -25,18 +25,17 @@ public class CharacterController2D : MonoBehaviour
     public float runSpeed = 40f;
 	float horizontalMove = 0f;
 
-	private void Awake()
-	{
-		rb = GetComponent<Rigidbody2D>();
-		animator = GetComponent<Animator>();
-        jumpTimeCounter = jumpTime;
-
-    }
+	private Vector3 respawnPoint;
+	public GameObject fallDetector;
 
 	private void Start()
 	{
         QualitySettings.vSyncCount = 0;
         Application.targetFrameRate = targetFrameRate;
+		rb = GetComponent<Rigidbody2D>();
+		animator = GetComponent<Animator>();
+        jumpTimeCounter = jumpTime;
+		respawnPoint = transform.position;
     }
 	private void Update()
 	{
@@ -77,8 +76,9 @@ public class CharacterController2D : MonoBehaviour
 		if(rb.velocity.y < 0)
 		{
 			animator.SetBool("Falling", true);
-
         }
+
+		fallDetector.transform.position = new Vector2(transform.position.x, fallDetector.transform.position.y);
     }
 
 	private void GroundCheck()
@@ -156,5 +156,14 @@ public class CharacterController2D : MonoBehaviour
 		{
             animator.SetLayerWeight(1, 0);
         }
+	}
+
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
+		if(collision.tag == "FallDetector")
+		{
+			Debug.Log("Player respawned");
+			transform.position = respawnPoint;
+		}	
 	}
 }

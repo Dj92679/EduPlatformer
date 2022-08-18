@@ -77,8 +77,6 @@ public class CharacterController2D : MonoBehaviour
 		{
 			animator.SetBool("Falling", true);
         }
-
-		fallDetector.transform.position = new Vector2(transform.position.x, fallDetector.transform.position.y);
     }
 
 	private void GroundCheck()

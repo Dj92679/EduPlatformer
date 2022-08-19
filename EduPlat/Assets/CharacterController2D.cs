@@ -165,7 +165,7 @@ void Update()
 	{
 		boxCollider.isTrigger = true;
 		circleCollider.isTrigger = true;
-		yield return new WaitForSeconds(0.2f);
+		yield return new WaitForSeconds(0.3f);
 		boxCollider.isTrigger = false;
 		circleCollider.isTrigger = false;
 	}

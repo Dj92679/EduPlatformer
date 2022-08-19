@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 18056231}
   - component: {fileID: 18056230}
   - component: {fileID: 18056232}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: spikes-top (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -470,7 +470,7 @@ GameObject:
   - component: {fileID: 73377787}
   - component: {fileID: 73377786}
   - component: {fileID: 73377788}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: spikes-top (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -581,7 +581,7 @@ GameObject:
   - component: {fileID: 94875747}
   - component: {fileID: 94875746}
   - component: {fileID: 94875745}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: spikes (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -691,7 +691,7 @@ GameObject:
   m_Component:
   - component: {fileID: 146123310}
   - component: {fileID: 146123309}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -775,7 +775,7 @@ GameObject:
   m_Component:
   - component: {fileID: 161017159}
   - component: {fileID: 161017160}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: sign (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1120,7 +1120,7 @@ GameObject:
   - component: {fileID: 249179464}
   - component: {fileID: 249179466}
   - component: {fileID: 249179465}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: spikes (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1315,7 +1315,7 @@ GameObject:
   - component: {fileID: 282080793}
   - component: {fileID: 282080792}
   - component: {fileID: 282080791}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: spikes-top (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1456,7 +1456,7 @@ GameObject:
   m_Component:
   - component: {fileID: 307952284}
   - component: {fileID: 307952285}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bush (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1551,11 +1551,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8708032538283523553, guid: 5d0d57c68395a48cf964761164381bfb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -73.8
+      value: 79.6
       objectReference: {fileID: 0}
     - target: {fileID: 8708032538283523553, guid: 5d0d57c68395a48cf964761164381bfb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -21.5
+      value: -0.8
       objectReference: {fileID: 0}
     - target: {fileID: 8708032538283523553, guid: 5d0d57c68395a48cf964761164381bfb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1588,6 +1588,10 @@ PrefabInstance:
     - target: {fileID: 8708032538283523553, guid: 5d0d57c68395a48cf964761164381bfb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8708032538283523559, guid: 5d0d57c68395a48cf964761164381bfb, type: 3}
+      propertyPath: m_WhatIsGround.m_Bits
+      value: 695
       objectReference: {fileID: 0}
     - target: {fileID: 8708032538283523563, guid: 5d0d57c68395a48cf964761164381bfb, type: 3}
       propertyPath: m_Name
@@ -1754,7 +1758,7 @@ GameObject:
   - component: {fileID: 374095190}
   - component: {fileID: 374095189}
   - component: {fileID: 374095188}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: spikes (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1864,7 +1868,7 @@ GameObject:
   m_Component:
   - component: {fileID: 375706127}
   - component: {fileID: 375706128}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2010,7 +2014,7 @@ GameObject:
   m_Component:
   - component: {fileID: 406348184}
   - component: {fileID: 406348185}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: house
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2095,7 +2099,7 @@ GameObject:
   - component: {fileID: 412471354}
   - component: {fileID: 412471353}
   - component: {fileID: 412471352}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: spikes (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2290,7 +2294,7 @@ GameObject:
   - component: {fileID: 427982168}
   - component: {fileID: 427982167}
   - component: {fileID: 427982166}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: spikes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2400,7 +2404,7 @@ GameObject:
   m_Component:
   - component: {fileID: 475818579}
   - component: {fileID: 475818578}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: house
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2552,7 +2556,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 509837451}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -67.55573, y: -21.56828, z: -10}
+  m_LocalPosition: {x: 79.6, y: -0.8, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2606,7 +2610,7 @@ GameObject:
   - component: {fileID: 527204793}
   - component: {fileID: 527204792}
   - component: {fileID: 527204791}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: spikes (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2800,7 +2804,7 @@ GameObject:
   m_Component:
   - component: {fileID: 550563472}
   - component: {fileID: 550563473}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2916,7 +2920,7 @@ GameObject:
   - component: {fileID: 638244503}
   - component: {fileID: 638244502}
   - component: {fileID: 638244501}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: spikes (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3089,7 +3093,7 @@ GameObject:
   m_Component:
   - component: {fileID: 687617085}
   - component: {fileID: 687617086}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: skulls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3237,7 +3241,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 725794269}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Foreground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3329,7 +3333,7 @@ GameObject:
   m_Component:
   - component: {fileID: 757630055}
   - component: {fileID: 757630054}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: skulls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3414,7 +3418,7 @@ GameObject:
   - component: {fileID: 798598962}
   - component: {fileID: 798598961}
   - component: {fileID: 798598960}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: spikes (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3524,7 +3528,7 @@ GameObject:
   m_Component:
   - component: {fileID: 810573867}
   - component: {fileID: 810573868}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tree (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3608,7 +3612,7 @@ GameObject:
   m_Component:
   - component: {fileID: 813879609}
   - component: {fileID: 813879608}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3693,7 +3697,7 @@ GameObject:
   - component: {fileID: 838683383}
   - component: {fileID: 838683382}
   - component: {fileID: 838683384}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: spikes (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3803,7 +3807,7 @@ GameObject:
   m_Component:
   - component: {fileID: 909298742}
   - component: {fileID: 909298743}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: house
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3888,7 +3892,7 @@ GameObject:
   - component: {fileID: 917929917}
   - component: {fileID: 917929916}
   - component: {fileID: 917929915}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: spikes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3999,7 +4003,7 @@ GameObject:
   - component: {fileID: 922311665}
   - component: {fileID: 922311664}
   - component: {fileID: 922311663}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: spikes (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4110,7 +4114,7 @@ GameObject:
   - component: {fileID: 934277025}
   - component: {fileID: 934277027}
   - component: {fileID: 934277026}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Foreground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71342,9 +71346,9 @@ GameObject:
   - component: {fileID: 935523988}
   - component: {fileID: 935523990}
   - component: {fileID: 935523989}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: big-crate (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71452,7 +71456,7 @@ GameObject:
   m_Component:
   - component: {fileID: 939057004}
   - component: {fileID: 939057005}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bush (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71536,7 +71540,7 @@ GameObject:
   m_Component:
   - component: {fileID: 952844768}
   - component: {fileID: 952844769}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71685,9 +71689,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1027880627}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Environment
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71721,7 +71725,7 @@ GameObject:
   - component: {fileID: 1032740386}
   - component: {fileID: 1032740388}
   - component: {fileID: 1032740387}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: spikes (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71865,7 +71869,7 @@ GameObject:
   - component: {fileID: 1051332847}
   - component: {fileID: 1051332846}
   - component: {fileID: 1051332848}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: spikes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71975,7 +71979,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1053468080}
   - component: {fileID: 1053468079}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: sign
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72059,7 +72063,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1078516186}
   - component: {fileID: 1078516187}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72213,7 +72217,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.4107337, y: 1}
+    m_SensorSize: {x: 2.262076, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -72230,7 +72234,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1096473207}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.2442703, y: 0.06827927, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -72266,7 +72270,7 @@ GameObject:
   - component: {fileID: 1101549616}
   - component: {fileID: 1101549615}
   - component: {fileID: 1101549614}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: spikes (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72410,7 +72414,7 @@ GameObject:
   - component: {fileID: 1144343903}
   - component: {fileID: 1144343902}
   - component: {fileID: 1144343901}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: spikes (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72526,7 +72530,7 @@ GameObject:
   - component: {fileID: 1188448501}
   - component: {fileID: 1188448503}
   - component: {fileID: 1188448502}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: spikes (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72636,7 +72640,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1206752352}
   - component: {fileID: 1206752353}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tree (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72751,7 +72755,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1251583850}
   - component: {fileID: 1251583849}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72866,7 +72870,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1263199417}
   - component: {fileID: 1263199416}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72950,7 +72954,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1291017955}
   - component: {fileID: 1291017956}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73147,9 +73151,9 @@ GameObject:
   - component: {fileID: 1317589839}
   - component: {fileID: 1317589838}
   - component: {fileID: 1317589840}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Platforms
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73657,7 +73661,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1408113785}
   - component: {fileID: 1408113786}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73742,7 +73746,7 @@ GameObject:
   - component: {fileID: 1432214033}
   - component: {fileID: 1432214035}
   - component: {fileID: 1432214034}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: spikes (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74025,7 +74029,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1530969065}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Obstacles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74085,7 +74089,7 @@ GameObject:
   - component: {fileID: 1596908557}
   - component: {fileID: 1596908556}
   - component: {fileID: 1596908558}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: spikes-top (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74332,7 +74336,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1600749518}
   - component: {fileID: 1600749519}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bush (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74417,7 +74421,7 @@ GameObject:
   - component: {fileID: 1621371370}
   - component: {fileID: 1621371369}
   - component: {fileID: 1621371368}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: spikes (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74527,7 +74531,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1635905120}
   - component: {fileID: 1635905119}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: skulls (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74612,7 +74616,7 @@ GameObject:
   - component: {fileID: 1640650153}
   - component: {fileID: 1640650155}
   - component: {fileID: 1640650154}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: spikes (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74723,7 +74727,7 @@ GameObject:
   - component: {fileID: 1642136489}
   - component: {fileID: 1642136488}
   - component: {fileID: 1642136487}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: spikes (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74833,7 +74837,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1660457989}
   - component: {fileID: 1660457990}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74878,7 +74882,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1661292226}
   - component: {fileID: 1661292227}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74923,7 +74927,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1688585680}
   - component: {fileID: 1688585681}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bush (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75207,9 +75211,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1769455830}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Platforms
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75241,7 +75245,7 @@ GameObject:
   - component: {fileID: 1786287964}
   - component: {fileID: 1786287963}
   - component: {fileID: 1786287962}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: spikes (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75391,9 +75395,9 @@ GameObject:
   - component: {fileID: 1793206442}
   - component: {fileID: 1793206441}
   - component: {fileID: 1793206443}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Environment
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -84292,7 +84296,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1807716372}
   - component: {fileID: 1807716373}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: sign
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84376,7 +84380,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1863444573}
   - component: {fileID: 1863444572}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: skulls (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84524,7 +84528,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1921677821}
   - component: {fileID: 1921677822}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bush (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84609,9 +84613,9 @@ GameObject:
   - component: {fileID: 1926417182}
   - component: {fileID: 1926417184}
   - component: {fileID: 1926417183}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: big-crate
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -84816,7 +84820,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1998364077}
   - component: {fileID: 1998364076}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: skulls (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84900,7 +84904,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2042949577}
   - component: {fileID: 2042949578}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bush (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84985,7 +84989,7 @@ GameObject:
   - component: {fileID: 2046665373}
   - component: {fileID: 2046665372}
   - component: {fileID: 2046665371}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: spikes (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85352,7 +85356,7 @@ GameObject:
   - component: {fileID: 2060954840}
   - component: {fileID: 2060954839}
   - component: {fileID: 2060954838}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: spikes (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

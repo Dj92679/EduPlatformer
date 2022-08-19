@@ -53,6 +53,7 @@ public class CharacterController2D : MonoBehaviour
     {
 		boxCollider = GetComponent<BoxCollider2D>();
 		circleCollider = GetComponent<CircleCollider2D>();
+		gameObject.tag = "Player";
 	}
 
     private void FixedUpdate()
@@ -74,18 +75,9 @@ public class CharacterController2D : MonoBehaviour
 		}
 	}
 
-void Update()
+	private void Update()
 	{	
-
-		// Disables the player collider temporarily
-		if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) 
-		{
-			if (Physics2D.Linecast(transform.position, m_GroundCheck.position))
-			{
-				StartCoroutine("Fall");
-			}
 			
-		}
 	} 
 
 
@@ -180,5 +172,20 @@ void Update()
 		Vector3 theScale = transform.localScale;
 		theScale.x *= -1;
 		transform.localScale = theScale;
+	}
+
+    private void OnCollisionStay2D(Collision2D other)
+    {
+		{
+			if (other.gameObject.tag == "Platform")
+			{
+				
+				if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
+				{
+					// Disables the player collider temporarily
+					StartCoroutine("Fall");
+				}
+			}
+		}
 	}
 }

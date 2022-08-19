@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -18,6 +20,9 @@ public class CharacterController2D : MonoBehaviour
 	private Rigidbody2D m_Rigidbody2D;
 	private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 	private Vector3 m_Velocity = Vector3.zero;
+	BoxCollider2D boxCollider;
+	CircleCollider2D circleCollider;
+
 
 	[Header("Events")]
 	[Space]
@@ -44,7 +49,13 @@ public class CharacterController2D : MonoBehaviour
 		Application.targetFrameRate = 300;
 	}
 
-	private void FixedUpdate()
+    private void Start()
+    {
+		boxCollider = GetComponent<BoxCollider2D>();
+		circleCollider = GetComponent<CircleCollider2D>();
+	}
+
+    private void FixedUpdate()
 	{
 		bool wasGrounded = m_Grounded;
 		m_Grounded = false;
@@ -62,6 +73,20 @@ public class CharacterController2D : MonoBehaviour
 			}
 		}
 	}
+
+void Update()
+	{	
+
+		// Disables the player collider temporarily
+		if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) 
+		{
+			if (Physics2D.Linecast(transform.position, m_GroundCheck.position))
+			{
+				StartCoroutine("Fall");
+			}
+			
+		}
+	} 
 
 
 	public void Move(float move, bool crouch, bool jump)
@@ -133,6 +158,16 @@ public class CharacterController2D : MonoBehaviour
 			m_Grounded = true;
 			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
 		}
+	}
+
+	// Makes the character fall by disabling then enabling the collider
+	private IEnumerator Fall()
+	{
+		boxCollider.isTrigger = true;
+		circleCollider.isTrigger = true;
+		yield return new WaitForSeconds(0.2f);
+		boxCollider.isTrigger = false;
+		circleCollider.isTrigger = false;
 	}
 
 

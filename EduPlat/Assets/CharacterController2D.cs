@@ -160,7 +160,6 @@ public class CharacterController2D : MonoBehaviour
 	{
 		if(collision.tag == "FallDetector")
 		{
-			Debug.Log("Player respawned");
 			transform.position = respawnPoint;
 		}	
 	}

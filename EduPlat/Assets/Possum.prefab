@@ -74,12 +74,12 @@ GameObject:
   m_Component:
   - component: {fileID: 5580880566033870875}
   - component: {fileID: 5580880566033870852}
-  - component: {fileID: 5580880566033870853}
   - component: {fileID: 5580880566033870874}
   - component: {fileID: 5580880566033870855}
+  - component: {fileID: 6121320021201733035}
   m_Layer: 0
   m_Name: Possum
-  m_TagString: Untagged
+  m_TagString: FallDetector
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -151,40 +151,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &5580880566033870853
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5580880566033870872}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.8, y: 1.4}
-    newSize: {x: 0.36, y: 0.28}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -1, y: 0.9333334}
-      - {x: -1.1333334, y: 0.86666673}
-      - {x: -1.2, y: 0.73333335}
-      - {x: -1.2, y: -0.8000001}
-      - {x: -1.0666667, y: -0.9333334}
-      - {x: 0.40000004, y: -0.9333334}
-      - {x: 0.86666673, y: -0.6666667}
-      - {x: 0.86666673, y: 0.73333335}
-      - {x: 0.8000001, y: 0.9333334}
 --- !u!114 &5580880566033870874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,6 +188,44 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!60 &6121320021201733035
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5580880566033870872}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.8, y: 1.4}
+    newSize: {x: 0.36, y: 0.28}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.24382305, y: 0.067855835}
+      - {x: -0.18181992, y: 0.08688736}
+      - {x: -0.23191452, y: 0.31039047}
+      - {x: -0.5021992, y: 0.32177848}
+      - {x: -0.706535, y: 0.28481907}
+      - {x: -0.84783024, y: 0.034832776}
+      - {x: -0.6782822, y: -0.5413109}
+      - {x: -0.2531891, y: -0.6586418}
+      - {x: -0.045951664, y: -0.6646263}
+      - {x: 0.18261987, y: -0.47176284}
+      - {x: 0.5391421, y: -0.40870667}
+      - {x: 0.51957935, y: 0.3608883}
+      - {x: 0.33263552, y: 0.60870665}
 --- !u!1 &5580880566255945411
 GameObject:
   m_ObjectHideFlags: 0

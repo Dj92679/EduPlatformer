@@ -838,6 +838,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5580880564688976455, guid: 88377712f48f24833841666dbfbfd121, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 5580880565785499056, guid: 88377712f48f24833841666dbfbfd121, type: 3}
       propertyPath: m_Name
       value: Possum (2)
@@ -901,6 +905,10 @@ PrefabInstance:
     - target: {fileID: 5580880566255945410, guid: 88377712f48f24833841666dbfbfd121, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 5580880566255945410, guid: 88377712f48f24833841666dbfbfd121, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88377712f48f24833841666dbfbfd121, type: 3}
@@ -2174,7 +2182,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2198,7 +2206,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 873300174}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.006334, y: 4.9700956, z: -10}
+  m_LocalPosition: {x: 7.0180435, y: 2.9701009, z: -10}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2264,7 +2272,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 895356542}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 64.46, y: 10.84, z: 0}
+  m_LocalPosition: {x: 67.81, y: 10.68, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23916,14 +23924,14 @@ MonoBehaviour:
   m_Follow: {fileID: 371199953}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 10
+    OrthographicSize: 8
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.2818058, y: 1}
+    m_SensorSize: {x: 1.3591732, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -31569,7 +31577,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1528984893}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 54.24, y: 8.11, z: 0}
+  m_LocalPosition: {x: 54.24, y: 8.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -773,7 +773,7 @@ GameObject:
   - component: {fileID: 760351024}
   - component: {fileID: 760351026}
   m_Layer: 0
-  m_Name: Environment
+  m_Name: Environment Dylan Su
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6221,7 +6221,7 @@ GameObject:
   - component: {fileID: 1135974737}
   - component: {fileID: 1135974736}
   m_Layer: 0
-  m_Name: Background
+  m_Name: Background Dylan Su
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

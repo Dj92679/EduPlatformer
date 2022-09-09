@@ -193,7 +193,6 @@ public class CharacterController2D : MonoBehaviour
 				{
 					// Disables the player collider temporarily
 					StartCoroutine("Fall");
-					
 				}
 			}
 		}

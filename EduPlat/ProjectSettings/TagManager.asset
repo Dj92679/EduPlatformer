@@ -7,19 +7,15 @@ TagManager:
   - Obstacle
   - Enemy
   - Ground
-  - Platform
   - FallDetector
+  - Platform
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Background
+  - Player
   - Water
   - UI
-  - Foreground
-  - Environment
-  - 
-  - Platforms
   - 
   - 
   - 
@@ -41,20 +37,24 @@ TagManager:
   - 
   - 
   - 
-  - Entities
+  - 
+  - 
+  - 
+  - 
+  - 
   m_SortingLayers:
   - name: Background
     uniqueID: 2380830439
     locked: 0
+  - name: Background Objects
+    uniqueID: 3981426675
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Foreground
-    uniqueID: 1773476557
-    locked: 0
   - name: Environment
-    uniqueID: 4091288197
+    uniqueID: 2782284759
     locked: 0
-  - name: Entities
-    uniqueID: 3754625949
+  - name: Character
+    uniqueID: 1272797873
     locked: 0

@@ -1873,6 +1873,10 @@ PrefabInstance:
       value: 5.52
       objectReference: {fileID: 0}
     - target: {fileID: 2752256573183163615, guid: 38faa0b0a85d24d1ba6c59cb95362ba8, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2752256573183163615, guid: 38faa0b0a85d24d1ba6c59cb95362ba8, type: 3}
       propertyPath: m_TagString
       value: Platform
       objectReference: {fileID: 0}
@@ -2124,7 +2128,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 873300174}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.864968, y: 1.9701037, z: -10}
+  m_LocalPosition: {x: 11.813486, y: 1.9701037, z: -10}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -23849,7 +23853,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.106017, y: 1}
+    m_SensorSize: {x: 2.2415197, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -31777,6 +31781,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 5.52
       objectReference: {fileID: 0}
+    - target: {fileID: 2752256573183163615, guid: 38faa0b0a85d24d1ba6c59cb95362ba8, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2752256573183163615, guid: 38faa0b0a85d24d1ba6c59cb95362ba8, type: 3}
+      propertyPath: m_TagString
+      value: Platform
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38faa0b0a85d24d1ba6c59cb95362ba8, type: 3}
 --- !u!1 &1641447952
@@ -32750,6 +32762,14 @@ PrefabInstance:
     - target: {fileID: 2752256573183163614, guid: 38faa0b0a85d24d1ba6c59cb95362ba8, type: 3}
       propertyPath: m_LocalPosition.y
       value: 5.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 2752256573183163615, guid: 38faa0b0a85d24d1ba6c59cb95362ba8, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2752256573183163615, guid: 38faa0b0a85d24d1ba6c59cb95362ba8, type: 3}
+      propertyPath: m_TagString
+      value: Platform
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38faa0b0a85d24d1ba6c59cb95362ba8, type: 3}

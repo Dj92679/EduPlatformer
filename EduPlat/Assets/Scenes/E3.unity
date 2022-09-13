@@ -819,7 +819,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.106017, y: 1}
+    m_SensorSize: {x: 2.371367, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -9570,7 +9570,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1448697680}
   - component: {fileID: 1448697679}
-  m_Layer: 8
+  m_Layer: 31
   m_Name: Confiner
   m_TagString: Untagged
   m_Icon: {fileID: 0}

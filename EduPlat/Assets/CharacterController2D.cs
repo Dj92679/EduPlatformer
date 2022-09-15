@@ -19,6 +19,7 @@ public class CharacterController2D : MonoBehaviour
 	private Vector3 m_Velocity = Vector3.zero;
     public Animator animator;
     public int targetFrameRate = 60;
+	public List<GameObject> numbers = new List<GameObject>();
 
     public float jumpTime;
 	private float jumpTimeCounter;
@@ -141,6 +142,10 @@ public class CharacterController2D : MonoBehaviour
         }
 	}
 
+	private void PlaceNumber() 
+	{
+		
+	}
 
 	private void Flip()
 	{

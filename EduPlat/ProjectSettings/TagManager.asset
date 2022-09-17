@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Ground
   - FallDetector
+  - Platform
   layers:
   - Default
   - TransparentFX

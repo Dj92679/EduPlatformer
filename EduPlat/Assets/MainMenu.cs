@@ -20,6 +20,21 @@ public class MainMenu : MonoBehaviour
     }
     public void QuitGame()
     {
-        Application.Quit();
+        Debug.Log("Application quit");
+    }
+
+    public void GoToMediumLevel()
+    {
+        SceneManager.LoadScene("M1");
+    }
+
+    public void GoToEasyLevel()
+    {
+        Debug.Log("Loading easy level");
+    }
+
+    public void GoToHardfLevel()
+    {
+        Debug.Log("Loading hard level");
     }
 }

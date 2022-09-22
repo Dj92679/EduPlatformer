@@ -8,7 +8,7 @@ public class NumberSpawn : MonoBehaviour
     public GameObject nums;
     public GameObject spawns;
     //Random rand = new Random();
-    private string[] operations = { "+", "-", "*", "/" };
+    private string[] operations = { "+", "-", "x", "/" };
     public int difficulty;
     private int[] numbers = new int[151];
     private int solution;
@@ -212,7 +212,7 @@ public class NumberSpawn : MonoBehaviour
                         break;
                     }
 
-                case "*":
+                case "x":
                     {
                         //Console.WriteLine("Equation type: " + operation);
 
@@ -429,7 +429,7 @@ public class NumberSpawn : MonoBehaviour
                         break;
                     }
 
-                case "*":
+                case "x":
                     {
                         //Console.WriteLine("Equation type: " + operation);
 

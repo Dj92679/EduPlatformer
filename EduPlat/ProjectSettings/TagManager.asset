@@ -9,6 +9,7 @@ TagManager:
   - Ground
   - Platform
   - FallDetector
+  - Number
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - Background Objects
   - Environment
   - Platforms
-  - 
+  - Numbers
   - 
   - 
   - 
@@ -57,6 +58,9 @@ TagManager:
     locked: 0
   - name: Environment
     uniqueID: 4091288197
+    locked: 0
+  - name: Number
+    uniqueID: 950304483
     locked: 0
   - name: Entities
     uniqueID: 3754625949

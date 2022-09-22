@@ -113,6 +113,7 @@ MonoBehaviour:
   m_CeilingCheck: {fileID: 5622836402079241036}
   animator: {fileID: 5622836402000978875}
   targetFrameRate: 60
+  numbers: []
   jumpTime: 0
   runSpeed: 40
   fallDetector: {fileID: 0}

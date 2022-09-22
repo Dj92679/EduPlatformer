@@ -30,6 +30,8 @@ public class CharacterController2D : MonoBehaviour
 
 	private Vector3 respawnPoint;
 	public GameObject fallDetector;
+	public Vector3 spacing = new Vector3(-0.1f, 0.1f, 0f);
+	public Vector3 spacing2 = new Vector3(0.1f, 0.1f, 0f);
 
 	BoxCollider2D boxCollider;
 	CircleCollider2D circleCollider;
@@ -87,6 +89,16 @@ public class CharacterController2D : MonoBehaviour
 		{
 			animator.SetBool("Falling", true);
         }
+
+		foreach(GameObject number in numbers) {
+			if(numbers.Count == 1) {
+				numbers[0].transform.position = Vector3.Lerp(number.transform.position, transform.position + spacing, 10f);
+			}
+			if(numbers.Count == 2) {
+				numbers[0].transform.position = Vector3.Lerp(number.transform.position, transform.position + spacing, 10f);
+				numbers[1].transform.position = Vector3.Lerp(number.transform.position, transform.position + spacing2, 10f);
+			}
+		}
     }
 
 	private void GroundCheck()
@@ -185,21 +197,24 @@ public class CharacterController2D : MonoBehaviour
 		if(collision.tag == "FallDetector")
 		{
 			transform.position = respawnPoint;
-		}	
+		}
+		if(collision.gameObject.tag == "Number" && Input.GetKey("space")) {
+			numbers.Add(collision.gameObject);
+			if(numbers.Count > 2) {
+				numbers.RemoveAt(0);
+			}
+		}
 	}
 
 	private void OnCollisionStay2D(Collision2D other)
     {
+		if (other.gameObject.tag == "Platform")
 		{
-			if (other.gameObject.tag == "Platform")
+			if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
 			{
-				
-				if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
-				{
-					// Disables the player collider temporarily
-					StartCoroutine("Fall");
+				// Disables the player collider temporarily
+				StartCoroutine("Fall");
 					
-				}
 			}
 		}
 	}

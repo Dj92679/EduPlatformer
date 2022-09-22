@@ -203,7 +203,7 @@ public class CharacterController2D : MonoBehaviour
 			if(numbers.Count > 2) {
 				numbers.RemoveAt(0);
 			}
-	}
+		}
 	}
 
 	private void OnCollisionStay2D(Collision2D other)

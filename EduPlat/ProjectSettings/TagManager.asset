@@ -62,6 +62,9 @@ TagManager:
   - name: Number
     uniqueID: 950304483
     locked: 0
+  - name: Chests
+    uniqueID: 1049220633
+    locked: 0
   - name: Entities
     uniqueID: 3754625949
     locked: 0

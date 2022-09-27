@@ -50,7 +50,7 @@ public class CharacterController2D : MonoBehaviour
 		circleCollider = GetComponent<CircleCollider2D>();
 		gameObject.tag = "Player";
 
-		uiHud.GetChild(1).text = "Keys: " + keys;
+		//uiHud.GetChild(1).text = "Keys: " + keys;
     }
 
 	private void Update()

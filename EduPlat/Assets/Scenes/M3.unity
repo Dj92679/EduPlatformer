@@ -222,7 +222,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5727128
 Transform:
   m_ObjectHideFlags: 0
@@ -236,10 +236,10 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 387846826}
-  - {fileID: 1381218963}
-  - {fileID: 816641087}
-  - {fileID: 732222656}
   - {fileID: 403860543}
+  - {fileID: 732222656}
+  - {fileID: 816641087}
+  - {fileID: 1381218963}
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4081,9 +4081,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cea950ff3b9b0804f967eaec919f19f7, type: 3}
---- !u!4 &387846826 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6930122694965717509, guid: cea950ff3b9b0804f967eaec919f19f7, type: 3}
+--- !u!224 &387846826 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8476833441180596794, guid: cea950ff3b9b0804f967eaec919f19f7, type: 3}
   m_PrefabInstance: {fileID: 387846825}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &391467719
@@ -4315,9 +4315,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cea950ff3b9b0804f967eaec919f19f7, type: 3}
---- !u!4 &403860543 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6930122694965717509, guid: cea950ff3b9b0804f967eaec919f19f7, type: 3}
+--- !u!224 &403860543 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8476833441180596794, guid: cea950ff3b9b0804f967eaec919f19f7, type: 3}
   m_PrefabInstance: {fileID: 403860542}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &405098352
@@ -6694,9 +6694,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cea950ff3b9b0804f967eaec919f19f7, type: 3}
---- !u!4 &732222656 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6930122694965717509, guid: cea950ff3b9b0804f967eaec919f19f7, type: 3}
+--- !u!224 &732222656 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8476833441180596794, guid: cea950ff3b9b0804f967eaec919f19f7, type: 3}
   m_PrefabInstance: {fileID: 732222655}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &733343909
@@ -7409,9 +7409,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cea950ff3b9b0804f967eaec919f19f7, type: 3}
---- !u!4 &816641087 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6930122694965717509, guid: cea950ff3b9b0804f967eaec919f19f7, type: 3}
+--- !u!224 &816641087 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8476833441180596794, guid: cea950ff3b9b0804f967eaec919f19f7, type: 3}
   m_PrefabInstance: {fileID: 816641086}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &825672428
@@ -89822,7 +89822,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.2415197, y: 1}
+    m_SensorSize: {x: 2.2354534, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -90926,9 +90926,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cea950ff3b9b0804f967eaec919f19f7, type: 3}
---- !u!4 &1381218963 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6930122694965717509, guid: cea950ff3b9b0804f967eaec919f19f7, type: 3}
+--- !u!224 &1381218963 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8476833441180596794, guid: cea950ff3b9b0804f967eaec919f19f7, type: 3}
   m_PrefabInstance: {fileID: 1381218962}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1387993874
@@ -93644,7 +93644,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1676288938}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.981227, y: -0.40423998, z: -10}
+  m_LocalPosition: {x: 11.932685, y: -0.40425, z: -10}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children:

@@ -6845,6 +6845,10 @@ PrefabInstance:
       value: MainChest
       objectReference: {fileID: 0}
     - target: {fileID: 6930122694965717508, guid: cea950ff3b9b0804f967eaec919f19f7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930122694965717508, guid: cea950ff3b9b0804f967eaec919f19f7, type: 3}
       propertyPath: m_TagString
       value: Chest
       objectReference: {fileID: 0}
@@ -99445,7 +99449,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.371367, y: 1}
+    m_SensorSize: {x: 2.2354534, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -105872,7 +105876,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1940453981}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.38707876, y: 5.2191, z: -10}
+  m_LocalPosition: {x: -1.3384721, y: 5.2193, z: -10}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -107021,7 +107025,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2032527578
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -28,6 +30,9 @@ public class CharacterController2D : MonoBehaviour
 	private Vector3 respawnPoint;
 	public GameObject fallDetector;
 
+	BoxCollider2D boxCollider;
+	CircleCollider2D circleCollider;
+
 	private void Start()
 	{
         QualitySettings.vSyncCount = 0;
@@ -36,7 +41,11 @@ public class CharacterController2D : MonoBehaviour
 		animator = GetComponent<Animator>();
         jumpTimeCounter = jumpTime;
 		respawnPoint = transform.position;
+		boxCollider = GetComponent<BoxCollider2D>();
+		circleCollider = GetComponent<CircleCollider2D>();
+		gameObject.tag = "Player";
     }
+
 	private void Update()
 	{
         GroundCheck();
@@ -101,7 +110,7 @@ public class CharacterController2D : MonoBehaviour
 		SwitchLayers();
     }
 
-	public void Move(float move)
+	private void Move(float move)
 	{
 
 		//only control the player if grounded or airControl is turned on
@@ -156,11 +165,36 @@ public class CharacterController2D : MonoBehaviour
         }
 	}
 
+	// Makes the character fall by disabling then enabling the collider
+	private IEnumerator Fall()
+	{
+		boxCollider.isTrigger = true;
+		circleCollider.isTrigger = true;
+		yield return new WaitForSeconds(0.3f);
+		boxCollider.isTrigger = false;
+		circleCollider.isTrigger = false;
+	}
+
 	private void OnTriggerEnter2D(Collider2D collision)
-    {
+	{
 		if(collision.tag == "FallDetector")
-        {
+		{
 			transform.position = respawnPoint;
-        }
-    }
+		}	
+	}
+
+	private void OnCollisionStay2D(Collision2D other)
+    {
+		{
+			if (other.gameObject.tag == "Platform")
+			{
+				
+				if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
+				{
+					// Disables the player collider temporarily
+					StartCoroutine("Fall");
+				}
+			}
+		}
+	}
 }

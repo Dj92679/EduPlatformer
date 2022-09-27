@@ -3492,12 +3492,12 @@ RectTransform:
   m_LocalScale: {x: 0.45895833, y: 0.45895833, z: 0.45895833}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_Father: {fileID: 524242666}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1113.8086, y: 472.76126}
+  m_AnchoredPosition: {x: 1113.8086, y: 472.30814}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &282651591
@@ -6391,8 +6391,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nums: {fileID: 1603850890}
   spawns: {fileID: 484765946}
-  chestLocations: {fileID: 0}
-  difficulty: 1
+  chestLocations: {fileID: 198371271}
+  difficulty: 3
+  operation: 
+  first: 0
+  second: 0
+--- !u!224 &524242666 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8476833441180596794, guid: cea950ff3b9b0804f967eaec919f19f7, type: 3}
+  m_PrefabInstance: {fileID: 524242658}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &530763974
 GameObject:
   m_ObjectHideFlags: 0

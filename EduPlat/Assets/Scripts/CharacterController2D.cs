@@ -211,6 +211,7 @@ public class CharacterController2D : MonoBehaviour
 
 		if(collision.gameObject.tag == "Chest") {
 			if(numbers.Count == 2 && keys < 5) {
+				Debug.Log("chest has been triggered");
 				if(numbers[0].GetComponent<NumScript>().value == collision.gameObject.GetComponent<NumberSpawn>().first && numbers[1].GetComponent<NumScript>().value == collision.gameObject.GetComponent<NumberSpawn>().second || numbers[1].GetComponent<NumScript>().value == collision.gameObject.GetComponent<NumberSpawn>().first && numbers[0].GetComponent<NumScript>().value == collision.gameObject.GetComponent<NumberSpawn>().second) {
 					keys++;
 					numbers.RemoveAt(0);
@@ -231,7 +232,6 @@ public class CharacterController2D : MonoBehaviour
 			{
 				// Disables the player collider temporarily
 				StartCoroutine("Fall");
-					
 			}
 		}
 		}

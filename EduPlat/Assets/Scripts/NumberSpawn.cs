@@ -13,7 +13,7 @@ public class NumberSpawn : MonoBehaviour
     private string[] operations = { "+", "-", "x", "/" };
     public int difficulty;
     private int[] numbers = new int[151];
-    private int solution;
+    public int solution;
     private int[] spawned_numbers = new int[10];
     public string operation;
     public int first;
@@ -22,6 +22,7 @@ public class NumberSpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("Level started");
         Spawn();
         //this.GetComponent<Text>.text = "__ " + operation + " __ = " + solution;
     }

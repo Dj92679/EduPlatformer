@@ -568,6 +568,6 @@ public class NumberSpawn : MonoBehaviour
     for(int i = 0; i < spawned_numbers.Length; i++) {
         Instantiate(nums.transform.GetChild(spawned_numbers[i]), spawns.transform.GetChild(i).transform.position, Quaternion.identity);
     }
-    this.GetComponent<Text>.text = "";
+    //this.GetComponent<Text>.text = "";
     }
 }

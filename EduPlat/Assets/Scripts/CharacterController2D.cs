@@ -209,10 +209,12 @@ public class CharacterController2D : MonoBehaviour
 			}
 		}
 
-		if(collision.tag == "Chest") {
+		if(collision.gameObject.tag == "Chest") {
 			if(numbers.Count == 2 && keys < 5) {
 				if(numbers[0].GetComponent<NumScript>().value == collision.gameObject.GetComponent<NumberSpawn>().first && numbers[1].GetComponent<NumScript>().value == collision.gameObject.GetComponent<NumberSpawn>().second || numbers[1].GetComponent<NumScript>().value == collision.gameObject.GetComponent<NumberSpawn>().first && numbers[0].GetComponent<NumScript>().value == collision.gameObject.GetComponent<NumberSpawn>().second) {
 					keys++;
+					numbers.RemoveAt(0);
+					numbers.RemoveAt(0);
 					if(keys < 5) {
 						collision.gameObject.transform.position = collision.gameObject.GetComponent<NumberSpawn>().chestLocations.transform.GetChild(keys).transform.position;
 					}

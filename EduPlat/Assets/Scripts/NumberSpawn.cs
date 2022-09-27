@@ -8,6 +8,7 @@ public class NumberSpawn : MonoBehaviour
     public GameObject nums;
     public GameObject spawns;
     public GameObject chestLocations;
+    public GameObject equationText;
     //Random rand = new Random();
     private string[] operations = { "+", "-", "x", "/" };
     public int difficulty;
@@ -21,7 +22,8 @@ public class NumberSpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Spawn();
+        //this.GetComponent<Text>.text = "__ " + operation + " __ = " + solution;
     }
 
 

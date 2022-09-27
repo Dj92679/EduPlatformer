@@ -24,14 +24,15 @@ public class CharacterController2D : MonoBehaviour
     public float jumpTime;
 	private float jumpTimeCounter;
 	private bool stoppedJumping;
+	private int keys = 0; 
 
     public float runSpeed = 40f;
 	float horizontalMove = 0f;
 
 	private Vector3 respawnPoint;
 	public GameObject fallDetector;
-	public Vector3 spacing = new Vector3(-0.1f, 0.1f, 0f);
-	public Vector3 spacing2 = new Vector3(0.1f, 0.1f, 0f);
+	public Vector3 spacing = new Vector3(-2f, 2f, 0f);
+	public Vector3 spacing2 = new Vector3(2f, 2f, 0f);
 
 	BoxCollider2D boxCollider;
 	CircleCollider2D circleCollider;
@@ -200,8 +201,22 @@ public class CharacterController2D : MonoBehaviour
 		}
 		if(collision.gameObject.tag == "Number" && Input.GetKey("space")) {
 			numbers.Add(collision.gameObject);
+			if(numbers[0] == numbers[1]) {
+				numbers.RemoveAt(1);
+			}
 			if(numbers.Count > 2) {
 				numbers.RemoveAt(0);
+			}
+		}
+
+		if(collision.tag == "Chest") {
+			if(numbers.Count == 2 && keys < 5) {
+				if(numbers[0].GetComponent<NumScript>().value == collision.gameObject.GetComponent<NumberSpawn>().first && numbers[1].GetComponent<NumScript>().value == collision.gameObject.GetComponent<NumberSpawn>().second || numbers[1].GetComponent<NumScript>().value == collision.gameObject.GetComponent<NumberSpawn>().first && numbers[0].GetComponent<NumScript>().value == collision.gameObject.GetComponent<NumberSpawn>().second) {
+					keys++;
+					if(keys < 5) {
+						collision.gameObject.transform.position = collision.gameObject.GetComponent<NumberSpawn>().chestLocations.transform.GetChild(keys).transform.position;
+					}
+				}
 			}
 		}
 	}

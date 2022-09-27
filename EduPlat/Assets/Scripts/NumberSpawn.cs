@@ -7,6 +7,7 @@ public class NumberSpawn : MonoBehaviour
     //pre-set variables
     public GameObject nums;
     public GameObject spawns;
+    public GameObject chestLocations;
     //Random rand = new Random();
     private string[] operations = { "+", "-", "x", "/" };
     public int difficulty;

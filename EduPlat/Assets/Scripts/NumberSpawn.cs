@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NumberSpawn : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class NumberSpawn : MonoBehaviour
     public GameObject nums;
     public GameObject spawns;
     public GameObject chestLocations;
-    public GameObject equationText;
+    public Text equationText;
     //Random rand = new Random();
     private string[] operations = { "+", "-", "x", "/" };
     public int difficulty;
@@ -23,8 +24,8 @@ public class NumberSpawn : MonoBehaviour
     void Start()
     {
         Debug.Log("Level started");
+        equationText = this.gameObject.GetComponent<Text>();
         Spawn();
-        //this.GetComponent<Text>.text = "__ " + operation + " __ = " + solution;
     }
 
 
@@ -568,6 +569,6 @@ public class NumberSpawn : MonoBehaviour
     for(int i = 0; i < spawned_numbers.Length; i++) {
         Instantiate(nums.transform.GetChild(spawned_numbers[i]), spawns.transform.GetChild(i).transform.position, Quaternion.identity);
     }
-    //this.GetComponent<Text>.text = "";
+    equationText.text = "__ " + operation + " __ = " + solution;
     }
 }

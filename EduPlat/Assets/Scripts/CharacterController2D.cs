@@ -49,8 +49,6 @@ public class CharacterController2D : MonoBehaviour
 		boxCollider = GetComponent<BoxCollider2D>();
 		circleCollider = GetComponent<CircleCollider2D>();
 		gameObject.tag = "Player";
-
-		//uiHud.GetChild(1).text = "Keys: " + keys;
     }
 
 	private void Update()
@@ -217,7 +215,6 @@ public class CharacterController2D : MonoBehaviour
 				Debug.Log("chest has been triggered");
 				if(numbers[0].GetComponent<NumScript>().value == collision.gameObject.GetComponent<NumberSpawn>().first && numbers[1].GetComponent<NumScript>().value == collision.gameObject.GetComponent<NumberSpawn>().second || numbers[1].GetComponent<NumScript>().value == collision.gameObject.GetComponent<NumberSpawn>().first && numbers[0].GetComponent<NumScript>().value == collision.gameObject.GetComponent<NumberSpawn>().second) {
 					keys++;
-					//uiHud.GetChild(1).text = "Keys: " + keys;
 					Destroy(numbers[0]);
 					Destroy(numbers[1]);
 					collision.gameObject.GetComponent<NumberSpawn>().Spawn();

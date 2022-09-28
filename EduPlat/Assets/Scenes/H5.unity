@@ -29767,6 +29767,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 992986101}
+  audio: {fileID: 169000228}
 --- !u!114 &1623130374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33299,7 +33300,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.346113, y: 1}
+    m_SensorSize: {x: 2.0851064, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

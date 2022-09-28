@@ -2082,7 +2082,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 190188699}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.608282, y: -3.3271341, z: -10}
+  m_LocalPosition: {x: -7.1741943, y: -3.3411846, z: -10}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -119613,6 +119613,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 1372662228}
+  audio: {fileID: 190188704}
 --- !u!114 &1314638599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123224,7 +123225,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1609951508}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -19.639057, y: -0.17621993, z: 0}
+  m_LocalPosition: {x: -14.419351, y: -0.12938498, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -123261,7 +123262,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.346113, y: 1}
+    m_SensorSize: {x: 2.0851064, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

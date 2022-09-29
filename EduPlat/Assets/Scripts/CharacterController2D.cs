@@ -35,8 +35,7 @@ public class CharacterController2D : MonoBehaviour
 	public Vector3 spacing = new Vector3(-2f, 2f, 0f);
 	public Vector3 spacing2 = new Vector3(2f, 2f, 0f);
 
-	BoxCollider2D boxCollider;
-	CircleCollider2D circleCollider;
+    CapsuleCollider2D capsuleCollider;
 
 	private void Start()
 	{
@@ -46,8 +45,7 @@ public class CharacterController2D : MonoBehaviour
 		animator = GetComponent<Animator>();
         jumpTimeCounter = jumpTime;
 		respawnPoint = transform.position;
-		boxCollider = GetComponent<BoxCollider2D>();
-		circleCollider = GetComponent<CircleCollider2D>();
+		capsuleCollider = GetComponent<CapsuleCollider2D>();
 		gameObject.tag = "Player";
     }
 
@@ -156,11 +154,6 @@ public class CharacterController2D : MonoBehaviour
         }
 	}
 
-	private void PlaceNumber() 
-	{
-		
-	}
-
 	private void Flip()
 	{
 		// Switch the way the player is labelled as facing.
@@ -187,30 +180,39 @@ public class CharacterController2D : MonoBehaviour
 	// Makes the character fall by disabling then enabling the collider
 	private IEnumerator Fall()
 	{
-		boxCollider.isTrigger = true;
-		circleCollider.isTrigger = true;
+		capsuleCollider.isTrigger = true;
 		yield return new WaitForSeconds(0.3f);
-		boxCollider.isTrigger = false;
-		circleCollider.isTrigger = false;
 	}
 
-	private void OnTriggerEnter2D(Collider2D collision)
+	private void OnTriggerStay2D(Collider2D collision)
+	{
+        if (collision.gameObject.tag == "Number" && Input.GetKey("space"))
+        {
+            numbers.Add(collision.gameObject);
+            if (numbers[0] == numbers[1])
+            {
+                numbers.RemoveAt(1);
+            }
+            if (numbers.Count > 2)
+            {
+                numbers.RemoveAt(0);
+            }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
 	{
 		if(collision.tag == "FallDetector")
 		{
 			transform.position = respawnPoint;
 		}
-		if(collision.gameObject.tag == "Number" && Input.GetKey("space")) {
-			numbers.Add(collision.gameObject);
-			if(numbers[0] == numbers[1]) {
-				numbers.RemoveAt(1);
-			}
-			if(numbers.Count > 2) {
-				numbers.RemoveAt(0);
-			}
-		}
 
-		if(collision.gameObject.tag == "Chest") {
+        if (collision.gameObject.tag == "Ground")
+        {
+            capsuleCollider.isTrigger = false;
+        }
+
+        if (collision.gameObject.tag == "Chest") {
 			if(numbers.Count == 2 && keys < 5) {
 				Debug.Log("chest has been triggered");
 				if(numbers[0].GetComponent<NumScript>().value == collision.gameObject.GetComponent<NumberSpawn>().first && numbers[1].GetComponent<NumScript>().value == collision.gameObject.GetComponent<NumberSpawn>().second || numbers[1].GetComponent<NumScript>().value == collision.gameObject.GetComponent<NumberSpawn>().first && numbers[0].GetComponent<NumScript>().value == collision.gameObject.GetComponent<NumberSpawn>().second) {
@@ -228,13 +230,15 @@ public class CharacterController2D : MonoBehaviour
 
 	private void OnCollisionStay2D(Collision2D other)
     {
-		if (other.gameObject.tag == "Platform")
-		{
-			if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
-			{
-				// Disables the player collider temporarily
-				StartCoroutine("Fall");
-			}
-		}
-		}
-	}
+        if (other.gameObject.tag == "Platform")
+        {
+            if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
+            {
+                // Disables the player collider temporarily
+                StartCoroutine("Fall");
+            }
+        }
+
+    }
+	
+}

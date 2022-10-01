@@ -186,7 +186,7 @@ public class CharacterController2D : MonoBehaviour
 
 	private void OnTriggerStay2D(Collider2D collision)
 	{
-        if (collision.gameObject.tag == "Number" && Input.GetKey("space"))
+        if (collision.gameObject.tag == "Number" && Input.GetKeyUp("space"))
         {
             numbers.Add(collision.gameObject);
             if (numbers[0] == numbers[1])
@@ -195,6 +195,7 @@ public class CharacterController2D : MonoBehaviour
             }
             if (numbers.Count > 2)
             {
+				numbers[0].transform.position = transform.position;
                 numbers.RemoveAt(0);
             }
         }

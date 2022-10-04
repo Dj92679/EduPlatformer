@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using TMPro;
 
 public class CharacterController2D : MonoBehaviour
 {
@@ -21,6 +22,9 @@ public class CharacterController2D : MonoBehaviour
     public int targetFrameRate = 60;
 	public List<GameObject> numbers = new List<GameObject>();
 	public GameObject uiHud;
+	public GameObject equationText;
+	public GameObject chest;
+	public GameObject numPoint;
 
     public float jumpTime;
 	private float jumpTimeCounter;
@@ -29,6 +33,8 @@ public class CharacterController2D : MonoBehaviour
 
     public float runSpeed = 40f;
 	float horizontalMove = 0f;
+
+	
 
 	private Vector3 respawnPoint;
 	public GameObject fallDetector;
@@ -47,7 +53,8 @@ public class CharacterController2D : MonoBehaviour
 		respawnPoint = transform.position;
 		capsuleCollider = GetComponent<CapsuleCollider2D>();
 		gameObject.tag = "Player";
-    }
+		uiHud.GetComponent<TMP_Text>().text = "Keys: 0";
+	}
 
 	private void Update()
 	{
@@ -89,16 +96,6 @@ public class CharacterController2D : MonoBehaviour
 		{
 			animator.SetBool("Falling", true);
         }
-
-		foreach(GameObject number in numbers) {
-			if(numbers.Count == 1) {
-				numbers[0].transform.position = Vector3.Lerp(number.transform.position, transform.position + spacing, 10f);
-			}
-			if(numbers.Count == 2) {
-				numbers[0].transform.position = Vector3.Lerp(number.transform.position, transform.position + spacing, 10f);
-				numbers[1].transform.position = Vector3.Lerp(number.transform.position, transform.position + spacing2, 10f);
-			}
-		}
     }
 
 	private void GroundCheck()
@@ -189,14 +186,38 @@ public class CharacterController2D : MonoBehaviour
         if (collision.gameObject.tag == "Number" && Input.GetKeyUp("space"))
         {
             numbers.Add(collision.gameObject);
+			collision.gameObject.transform.position = numPoint.transform.position;
+			equationText.GetComponent<TMP_Text>().text = "Equation: " + numbers[0].GetComponent<NumScript>().value.ToString() + " " + chest.GetComponent<NumberSpawn>().operation + "  = " + chest.GetComponent<NumberSpawn>().solution;
             if (numbers[0] == numbers[1])
             {
                 numbers.RemoveAt(1);
-            }
+				equationText.GetComponent<TMP_Text>().text = "Equation: " + numbers[0].GetComponent<NumScript>().value.ToString() + " " + chest.GetComponent<NumberSpawn>().operation + "  = " + chest.GetComponent<NumberSpawn>().solution;
+    		}
+
+			if(numbers.Count == 1) {
+				equationText.GetComponent<TMP_Text>().text = "Equation: " + numbers[0].GetComponent<NumScript>().value.ToString() + " " + chest.GetComponent<NumberSpawn>().operation + "  = " + chest.GetComponent<NumberSpawn>().solution;
+			}
+
+			if(numbers.Count == 2) {
+				if(numbers[1].GetComponent<NumScript>().value > numbers[0].GetComponent<NumScript>().value) {
+					equationText.GetComponent<TMP_Text>().text = "Equation: " + numbers[1].GetComponent<NumScript>().value.ToString() + " " + chest.GetComponent<NumberSpawn>().operation +" " + numbers[0].GetComponent<NumScript>().value.ToString() + " = " + chest.GetComponent<NumberSpawn>().solution;
+				}
+				else {
+					equationText.GetComponent<TMP_Text>().text = "Equation: " + numbers[0].GetComponent<NumScript>().value.ToString() + " " + chest.GetComponent<NumberSpawn>().operation +" " + numbers[1].GetComponent<NumScript>().value.ToString() + " = " + chest.GetComponent<NumberSpawn>().solution;
+				}
+			}
+            
             if (numbers.Count > 2)
             {
 				numbers[0].transform.position = transform.position;
                 numbers.RemoveAt(0);
+				
+				if(numbers[1].GetComponent<NumScript>().value > numbers[0].GetComponent<NumScript>().value) {
+					equationText.GetComponent<TMP_Text>().text = "Equation: " + numbers[1].GetComponent<NumScript>().value.ToString() + " " + chest.GetComponent<NumberSpawn>().operation +" " + numbers[0].GetComponent<NumScript>().value.ToString() + " = " + chest.GetComponent<NumberSpawn>().solution;
+				}
+				else {
+					equationText.GetComponent<TMP_Text>().text = "Equation: " + numbers[0].GetComponent<NumScript>().value.ToString() + " " + chest.GetComponent<NumberSpawn>().operation +" " + numbers[1].GetComponent<NumScript>().value.ToString() + " = " + chest.GetComponent<NumberSpawn>().solution;
+				}
             }
         }
     }
@@ -218,8 +239,10 @@ public class CharacterController2D : MonoBehaviour
 				Debug.Log("chest has been triggered");
 				if(numbers[0].GetComponent<NumScript>().value == collision.gameObject.GetComponent<NumberSpawn>().first && numbers[1].GetComponent<NumScript>().value == collision.gameObject.GetComponent<NumberSpawn>().second || numbers[1].GetComponent<NumScript>().value == collision.gameObject.GetComponent<NumberSpawn>().first && numbers[0].GetComponent<NumScript>().value == collision.gameObject.GetComponent<NumberSpawn>().second) {
 					keys++;
-					Destroy(numbers[0]);
-					Destroy(numbers[1]);
+					uiHud.GetComponent<TMP_Text>().text = "Keys: " + keys.ToString();
+					//Destroy(numbers[0]);
+					//Destroy(numbers[1]);
+					numbers = new List<GameObject>();
 					collision.gameObject.GetComponent<NumberSpawn>().Spawn();
 					if(keys < 5) {
 						collision.gameObject.transform.position = collision.gameObject.GetComponent<NumberSpawn>().chestLocations.transform.GetChild(keys).transform.position;
@@ -241,5 +264,4 @@ public class CharacterController2D : MonoBehaviour
         }
 
     }
-	
 }

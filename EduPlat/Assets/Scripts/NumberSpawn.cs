@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class NumberSpawn : MonoBehaviour
 {
@@ -9,7 +10,8 @@ public class NumberSpawn : MonoBehaviour
     public GameObject nums;
     public GameObject spawns;
     public GameObject chestLocations;
-    public Text equationText;
+    public GameObject spawnedNums;
+    public GameObject equationText;
     //Random rand = new Random();
     private string[] operations = { "+", "-", "x", "/" };
     public int difficulty;
@@ -24,7 +26,7 @@ public class NumberSpawn : MonoBehaviour
     void Start()
     {
         Debug.Log("Level started");
-        equationText = this.gameObject.GetComponent<Text>();
+        //equationText = this.gameObject.GetComponent<Text>();
         Spawn();
     }
 
@@ -36,6 +38,7 @@ public class NumberSpawn : MonoBehaviour
     }
 
     public void Spawn() {
+        
         switch(difficulty)
 {
     case 1:
@@ -566,9 +569,21 @@ public class NumberSpawn : MonoBehaviour
             break;
         }
     }
-    for(int i = 0; i < spawned_numbers.Length; i++) {
-        Instantiate(nums.transform.GetChild(spawned_numbers[i]), spawns.transform.GetChild(i).transform.position, Quaternion.identity);
+    if(spawnedNums.transform.childCount > 1) {
+        Destroy(spawnedNums.transform.GetChild(0).gameObject);
+    Destroy(spawnedNums.transform.GetChild(1).gameObject);
+    Destroy(spawnedNums.transform.GetChild(2).gameObject);
+    Destroy(spawnedNums.transform.GetChild(3).gameObject);
+    Destroy(spawnedNums.transform.GetChild(4).gameObject);
+    Destroy(spawnedNums.transform.GetChild(5).gameObject);
+    Destroy(spawnedNums.transform.GetChild(6).gameObject);
+    Destroy(spawnedNums.transform.GetChild(7).gameObject);
+    Destroy(spawnedNums.transform.GetChild(8).gameObject);
+    Destroy(spawnedNums.transform.GetChild(9).gameObject);
     }
-    equationText.text = "__ " + operation + " __ = " + solution;
+    for(int i = 0; i < spawned_numbers.Length; i++) {
+        Instantiate(nums.transform.GetChild(spawned_numbers[i]), spawns.transform.GetChild(i).transform.position, Quaternion.identity, spawnedNums.transform);
+    }
+    equationText.GetComponent<TMP_Text>().text = "Equation:   " + operation + "   = " + solution.ToString();
     }
 }

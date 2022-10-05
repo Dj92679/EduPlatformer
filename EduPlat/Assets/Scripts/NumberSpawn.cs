@@ -336,10 +336,15 @@ public class NumberSpawn : MonoBehaviour
                                 int num = Random.Range(1, 11);
                                 for (int j = 0; j < spawned_numbers.Length; j++)
                                 {
-                                    if (num / spawned_numbers[j] == solution || spawned_numbers[j] / num == solution)
-                                    {
-                                        //Console.WriteLine("check failed");
-                                        checks_failed++;
+                                    try {
+                                        if (num / spawned_numbers[j] == solution || spawned_numbers[j] / num == solution)
+                                        {
+                                            //Console.WriteLine("check failed");
+                                            checks_failed++;
+                                        }
+                                    }
+                                    catch(DivideByZeroException) {
+                                        continue;
                                     }
                                 }
                                 if (checks_failed == 0)
@@ -545,11 +550,16 @@ public class NumberSpawn : MonoBehaviour
                                 int num = Random.Range(1, 13);
                                 for (int j = 0; j < spawned_numbers.Length; j++)
                                 {
-                                    if (num == 0 || num / spawned_numbers[j] == solution || spawned_numbers[j] / num == solution)
+                                    try {
+                                        if (num / spawned_numbers[j] == solution || spawned_numbers[j] / num == solution)
                                         {
                                             //Console.WriteLine("check failed");
                                             checks_failed++;
                                         }
+                                    }
+                                    catch(DivideByZeroException) {
+                                        continue;
+                                    }
                                 }
                                 if (checks_failed == 0)
                                 {

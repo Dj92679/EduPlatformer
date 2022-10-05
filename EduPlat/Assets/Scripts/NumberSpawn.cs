@@ -343,7 +343,7 @@ public class NumberSpawn : MonoBehaviour
                                             checks_failed++;
                                         }
                                     }
-                                    catch(DivideByZeroException) {
+                                    catch(System.DivideByZeroException) {
                                         continue;
                                     }
                                 }
@@ -557,7 +557,7 @@ public class NumberSpawn : MonoBehaviour
                                             checks_failed++;
                                         }
                                     }
-                                    catch(DivideByZeroException) {
+                                    catch(System.DivideByZeroException) {
                                         continue;
                                     }
                                 }

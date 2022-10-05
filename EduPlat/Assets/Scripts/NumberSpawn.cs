@@ -144,7 +144,7 @@ public class NumberSpawn : MonoBehaviour
         }
     case 2:
         {
-            string operation = operations[Random.Range(0, 4)];
+            operation = operations[Random.Range(0, 4)];
 
             switch (operation)
             {
@@ -361,7 +361,7 @@ public class NumberSpawn : MonoBehaviour
         }
     case 3:
         {
-            string operation = operations[Random.Range(0, 4)];
+            operation = operations[Random.Range(0, 4)];
             switch (operation)
             {
                 case "+":

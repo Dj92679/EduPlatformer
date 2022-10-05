@@ -319,8 +319,8 @@ public class NumberSpawn : MonoBehaviour
 
                         //lower limit is 1 becuase you cannot divive by 0
                         solution = Random.Range(1, 11);
-                        first = Random.Range(1, 11);
-                        second = solution * first;
+                        second = Random.Range(1, 11);
+                        first = solution * second;
 
                         //Console.WriteLine("Solution: " + solution + "\n" + "Num1: " + first + "\n" + "Num2: " + second);
 
@@ -336,7 +336,7 @@ public class NumberSpawn : MonoBehaviour
                                 int num = Random.Range(1, 11);
                                 for (int j = 0; j < spawned_numbers.Length; j++)
                                 {
-                                    if (num == 0 || num / spawned_numbers[j] == solution || spawned_numbers[j] / num == solution)
+                                    if (num / spawned_numbers[j] == solution || spawned_numbers[j] / num == solution)
                                     {
                                         //Console.WriteLine("check failed");
                                         checks_failed++;

@@ -528,8 +528,8 @@ public class NumberSpawn : MonoBehaviour
                         //Console.WriteLine("Equation type: " + operation);
 
                         solution = Random.Range(1, 13);
-                        first = Random.Range(1, 13);
-                        second = solution * first;
+                        second = Random.Range(1, 13);
+                        first = solution * second;
 
                         //Console.WriteLine("Solution: " + solution + "\n" + "Num1: " + first + "\n" + "Num2: " + second);
 

@@ -53,7 +53,7 @@ public class CharacterController2D : MonoBehaviour
 		respawnPoint = transform.position;
 		capsuleCollider = GetComponent<CapsuleCollider2D>();
 		gameObject.tag = "Player";
-		uiHud.GetComponent<TMP_Text>().text = "Keys: 0";
+		uiHud.GetComponent<TMP_Text>().text = "Keys: 0/5";
 	}
 
 	private void Update()
@@ -239,7 +239,7 @@ public class CharacterController2D : MonoBehaviour
 				Debug.Log("chest has been triggered");
 				if(numbers[0].GetComponent<NumScript>().value == collision.gameObject.GetComponent<NumberSpawn>().first && numbers[1].GetComponent<NumScript>().value == collision.gameObject.GetComponent<NumberSpawn>().second || numbers[1].GetComponent<NumScript>().value == collision.gameObject.GetComponent<NumberSpawn>().first && numbers[0].GetComponent<NumScript>().value == collision.gameObject.GetComponent<NumberSpawn>().second) {
 					keys++;
-					uiHud.GetComponent<TMP_Text>().text = "Keys: " + keys.ToString();
+					uiHud.GetComponent<TMP_Text>().text = "Keys: " + keys.ToString() + "/5";
 					//Destroy(numbers[0]);
 					//Destroy(numbers[1]);
 					numbers = new List<GameObject>();

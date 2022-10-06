@@ -245,7 +245,7 @@ public class CharacterController2D : MonoBehaviour
 					numbers = new List<GameObject>();
 					collision.gameObject.GetComponent<NumberSpawn>().Spawn();
 					if(keys < 5) {
-						collision.gameObject.transform.position = collision.gameObject.GetComponent<NumberSpawn>().chestLocations.transform.GetChild(keys).transform.position;
+						collision.gameObject.transform.position = collision.gameObject.GetComponent<NumberSpawn>().chestLocations.transform.GetChild(keys - 1).transform.position;
 					}
 				}
 			}

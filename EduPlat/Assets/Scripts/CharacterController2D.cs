@@ -188,11 +188,11 @@ public class CharacterController2D : MonoBehaviour
             numbers.Add(collision.gameObject);
 			collision.gameObject.transform.position = numPoint.transform.position;
 			equationText.GetComponent<TMP_Text>().text = "Equation: " + numbers[0].GetComponent<NumScript>().value.ToString() + " " + chest.GetComponent<NumberSpawn>().operation + "  = " + chest.GetComponent<NumberSpawn>().solution;
-            if (numbers[0] == numbers[1])
+            /*if (numbers[0] == numbers[1])
             {
                 numbers.RemoveAt(1);
 				equationText.GetComponent<TMP_Text>().text = "Equation: " + numbers[0].GetComponent<NumScript>().value.ToString() + " " + chest.GetComponent<NumberSpawn>().operation + "  = " + chest.GetComponent<NumberSpawn>().solution;
-    		}
+    		}*/
 
 			if(numbers.Count == 1) {
 				equationText.GetComponent<TMP_Text>().text = "Equation: " + numbers[0].GetComponent<NumScript>().value.ToString() + " " + chest.GetComponent<NumberSpawn>().operation + "  = " + chest.GetComponent<NumberSpawn>().solution;

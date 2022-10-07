@@ -17,6 +17,7 @@ public class NumberSpawn : MonoBehaviour
     public int difficulty;
     private int[] numbers = new int[151];
     public int solution;
+    private List<int> positions;
     private int[] spawned_numbers = new int[10];
     public string operation;
     public int first;
@@ -38,7 +39,7 @@ public class NumberSpawn : MonoBehaviour
     }
 
     public void Spawn() {
-        
+        positions = new List<int>() {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
         switch(difficulty)
 {
     case 1:
@@ -581,18 +582,21 @@ public class NumberSpawn : MonoBehaviour
     }
     if(spawnedNums.transform.childCount > 1) {
         Destroy(spawnedNums.transform.GetChild(0).gameObject);
-    Destroy(spawnedNums.transform.GetChild(1).gameObject);
-    Destroy(spawnedNums.transform.GetChild(2).gameObject);
-    Destroy(spawnedNums.transform.GetChild(3).gameObject);
-    Destroy(spawnedNums.transform.GetChild(4).gameObject);
-    Destroy(spawnedNums.transform.GetChild(5).gameObject);
-    Destroy(spawnedNums.transform.GetChild(6).gameObject);
-    Destroy(spawnedNums.transform.GetChild(7).gameObject);
-    Destroy(spawnedNums.transform.GetChild(8).gameObject);
-    Destroy(spawnedNums.transform.GetChild(9).gameObject);
+        Destroy(spawnedNums.transform.GetChild(1).gameObject);
+        Destroy(spawnedNums.transform.GetChild(2).gameObject);
+        Destroy(spawnedNums.transform.GetChild(3).gameObject);
+        Destroy(spawnedNums.transform.GetChild(4).gameObject);
+        Destroy(spawnedNums.transform.GetChild(5).gameObject);
+        Destroy(spawnedNums.transform.GetChild(6).gameObject);
+        Destroy(spawnedNums.transform.GetChild(7).gameObject);
+        Destroy(spawnedNums.transform.GetChild(8).gameObject);
+        Destroy(spawnedNums.transform.GetChild(9).gameObject);
     }
     for(int i = 0; i < spawned_numbers.Length; i++) {
-        Instantiate(nums.transform.GetChild(spawned_numbers[i]), spawns.transform.GetChild(i).transform.position, Quaternion.identity, spawnedNums.transform);
+        int choice = Random.Range(0, positions.Count);
+        int pos = positions[choice];
+        positions.RemoveAt(choice);
+        Instantiate(nums.transform.GetChild(spawned_numbers[i]), spawns.transform.GetChild(pos).transform.position, Quaternion.identity, spawnedNums.transform);
     }
     equationText.GetComponent<TMP_Text>().text = "Equation:   " + operation + "   = " + solution.ToString();
     }

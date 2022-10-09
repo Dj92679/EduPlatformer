@@ -99478,7 +99478,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.3527508, y: 1}
+    m_SensorSize: {x: 2.0852273, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -105921,6 +105921,7 @@ GameObject:
   - component: {fileID: 1940453982}
   - component: {fileID: 1940453985}
   - component: {fileID: 1940453987}
+  - component: {fileID: 1940453988}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -105987,7 +105988,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1940453981}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.51738954, y: 5.21913, z: -10}
+  m_LocalPosition: {x: -2.3900626, y: 5.2195797, z: -10}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -106125,6 +106126,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1940453988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1940453981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d8deb09633d3b0428ce850ad989e60f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1968128465
 PrefabInstance:
   m_ObjectHideFlags: 0

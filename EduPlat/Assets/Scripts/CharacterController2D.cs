@@ -239,10 +239,10 @@ public class CharacterController2D : MonoBehaviour
         if (collision.gameObject.tag == "Chest") {
 			if(numbers.Count == 2 && keys < 5) {
 				Debug.Log("chest has been triggered");
-                SoundManager.PlaySound("Solve");
                 if (numbers[0].GetComponent<NumScript>().value == collision.gameObject.GetComponent<NumberSpawn>().first && numbers[1].GetComponent<NumScript>().value == collision.gameObject.GetComponent<NumberSpawn>().second || numbers[1].GetComponent<NumScript>().value == collision.gameObject.GetComponent<NumberSpawn>().first && numbers[0].GetComponent<NumScript>().value == collision.gameObject.GetComponent<NumberSpawn>().second) {
 					keys++;
-					uiHud.GetComponent<TMP_Text>().text = "Keys: " + keys.ToString() + "/5";
+                    SoundManager.PlaySound("Solve");
+                    uiHud.GetComponent<TMP_Text>().text = "Keys: " + keys.ToString() + "/5";
 					//Destroy(numbers[0]);
 					//Destroy(numbers[1]);
 					numbers = new List<GameObject>();

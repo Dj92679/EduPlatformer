@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class CharacterController2D : MonoBehaviour
 {
@@ -25,11 +26,13 @@ public class CharacterController2D : MonoBehaviour
 	public GameObject equationText;
 	public GameObject chest;
 	public GameObject numPoint;
+	public GameObject door;
+	public GameObject spawnedNums;
 
     public float jumpTime;
 	private float jumpTimeCounter;
 	private bool stoppedJumping;
-	private int keys = 0; 
+	private int keys = 5; 
 
     public float runSpeed = 40f;
 	float horizontalMove = 0f;
@@ -53,7 +56,7 @@ public class CharacterController2D : MonoBehaviour
 		respawnPoint = transform.position;
 		capsuleCollider = GetComponent<CapsuleCollider2D>();
 		gameObject.tag = "Player";
-		uiHud.GetComponent<TMP_Text>().text = "Keys: 0/5";
+		uiHud.GetComponent<TMP_Text>().text = "Keys: " + keys + "/5";
 	}
 
 	private void Update()
@@ -220,6 +223,69 @@ public class CharacterController2D : MonoBehaviour
 				}
             }
         }
+		if(collision.gameObject.tag == "Door" && keys == 5 && Input.GetKeyUp("space")) {
+			int difficulty = chest.GetComponent<NumberSpawn>().difficulty;
+			int level = door.GetComponent<DoorScript>().level;
+			switch(difficulty) {
+				case 1: 
+					switch(level) {
+						case 1:
+							SceneManager.LoadScene("E2");
+							break;
+						case 2:
+							SceneManager.LoadScene("E3");
+							break;
+						case 3:
+							SceneManager.LoadScene("E4");
+							break;
+						case 4:
+							SceneManager.LoadScene("E5");
+							break;
+						case 5:
+							SceneManager.LoadScene("MainMenu");
+							break;
+					}
+					break;
+				case 2: 
+					switch(level) {
+						case 1:
+							SceneManager.LoadScene("M2");
+							break;
+						case 2:
+							SceneManager.LoadScene("M3");
+							break;
+						case 3:
+							SceneManager.LoadScene("M4");
+							break;
+						case 4:
+							SceneManager.LoadScene("M5");
+							break;
+						case 5:
+							SceneManager.LoadScene("MainMenu");
+							break;
+					}
+					break;
+				case 3: 
+					switch(level) {
+						case 1:
+							SceneManager.LoadScene("H2");
+							break;
+						case 2:
+							SceneManager.LoadScene("H3");
+							break;
+						case 3:
+							SceneManager.LoadScene("H4");
+							break;
+						case 4:
+							SceneManager.LoadScene("H5");
+							break;
+						case 5:
+							SceneManager.LoadScene("MainMenu");
+							break;
+					}
+					break;
+			}
+		}
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -242,10 +308,15 @@ public class CharacterController2D : MonoBehaviour
 					uiHud.GetComponent<TMP_Text>().text = "Keys: " + keys.ToString() + "/5";
 					//Destroy(numbers[0]);
 					//Destroy(numbers[1]);
-					numbers = new List<GameObject>();
-					collision.gameObject.GetComponent<NumberSpawn>().Spawn();
 					if(keys < 5) {
 						collision.gameObject.transform.position = collision.gameObject.GetComponent<NumberSpawn>().chestLocations.transform.GetChild(keys - 1).transform.position;
+						numbers = new List<GameObject>();
+						collision.gameObject.GetComponent<NumberSpawn>().Spawn();
+					}
+					else {
+						equationText.GetComponent<TMP_Text>().text = "Level Complete! Head towards the house and press the Enter key";
+						Destroy(spawnedNums);
+						Destroy(chest);
 					}
 				}
 			}

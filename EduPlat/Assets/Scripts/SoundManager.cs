@@ -11,9 +11,9 @@ public class SoundManager : MonoBehaviour
 
     private void Start()
     {
-        jump = Resources.Load<AudioClip>("Jump");
-        pickup = Resources.Load<AudioClip>("pickup2");
-        solve = Resources.Load<AudioClip>("solve2");
+        jump = Resources.Load<AudioClip>("jump");
+        pickup = Resources.Load<AudioClip>("pickup");
+        solve = Resources.Load<AudioClip>("solve");
         audioSource = GetComponent<AudioSource>();
     }
 

@@ -77,6 +77,7 @@ public class CharacterController2D : MonoBehaviour
             rb.AddForce(new Vector2(0f, m_JumpForce));
 			stoppedJumping = false;
             animator.SetBool("isJumping", true);
+            SoundManager.PlaySound("Jump");
         }
 
 		if (Input.GetButtonDown("Jump") && !stoppedJumping && (jumpTimeCounter > 0))
@@ -191,13 +192,14 @@ public class CharacterController2D : MonoBehaviour
             numbers.Add(collision.gameObject);
 			collision.gameObject.transform.position = numPoint.transform.position;
 			equationText.GetComponent<TMP_Text>().text = "Equation: " + numbers[0].GetComponent<NumScript>().value.ToString() + " " + chest.GetComponent<NumberSpawn>().operation + "  = " + chest.GetComponent<NumberSpawn>().solution;
+            SoundManager.PlaySound("Pickup");
             /*if (numbers[0] == numbers[1])
             {
                 numbers.RemoveAt(1);
 				equationText.GetComponent<TMP_Text>().text = "Equation: " + numbers[0].GetComponent<NumScript>().value.ToString() + " " + chest.GetComponent<NumberSpawn>().operation + "  = " + chest.GetComponent<NumberSpawn>().solution;
     		}*/
 
-			if(numbers.Count == 1) {
+            if (numbers.Count == 1) {
 				equationText.GetComponent<TMP_Text>().text = "Equation: " + numbers[0].GetComponent<NumScript>().value.ToString() + " " + chest.GetComponent<NumberSpawn>().operation + "  = " + chest.GetComponent<NumberSpawn>().solution;
 			}
 
@@ -303,9 +305,10 @@ public class CharacterController2D : MonoBehaviour
         if (collision.gameObject.tag == "Chest") {
 			if(numbers.Count == 2 && keys < 5) {
 				Debug.Log("chest has been triggered");
-				if(numbers[0].GetComponent<NumScript>().value == collision.gameObject.GetComponent<NumberSpawn>().first && numbers[1].GetComponent<NumScript>().value == collision.gameObject.GetComponent<NumberSpawn>().second || numbers[1].GetComponent<NumScript>().value == collision.gameObject.GetComponent<NumberSpawn>().first && numbers[0].GetComponent<NumScript>().value == collision.gameObject.GetComponent<NumberSpawn>().second) {
+                if (numbers[0].GetComponent<NumScript>().value == collision.gameObject.GetComponent<NumberSpawn>().first && numbers[1].GetComponent<NumScript>().value == collision.gameObject.GetComponent<NumberSpawn>().second || numbers[1].GetComponent<NumScript>().value == collision.gameObject.GetComponent<NumberSpawn>().first && numbers[0].GetComponent<NumScript>().value == collision.gameObject.GetComponent<NumberSpawn>().second) {
 					keys++;
-					uiHud.GetComponent<TMP_Text>().text = "Keys: " + keys.ToString() + "/5";
+                    SoundManager.PlaySound("Solve");
+                    uiHud.GetComponent<TMP_Text>().text = "Keys: " + keys.ToString() + "/5";
 					//Destroy(numbers[0]);
 					//Destroy(numbers[1]);
 					if(keys < 5) {

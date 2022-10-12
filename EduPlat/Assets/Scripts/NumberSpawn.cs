@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class NumberSpawn : MonoBehaviour
 {
@@ -39,7 +40,13 @@ public class NumberSpawn : MonoBehaviour
     }
 
     public void Spawn() {
-        positions = new List<int>() {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+        if (SceneManager.GetActiveScene().name == "Tutorial")
+        {
+            positions = new List<int>() { 0, 1};
+            Debug.Log("Tutorial Level");
+        } else {
+            positions = new List<int>() { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+        }
         switch(difficulty)
 {
     case 1:
@@ -580,7 +587,14 @@ public class NumberSpawn : MonoBehaviour
             break;
         }
     }
-    if(spawnedNums.transform.childCount > 1) {
+        if (SceneManager.GetActiveScene().name == "Tutorial")
+        {  if (spawnedNums.transform.childCount > 1)
+            {
+                Destroy(spawnedNums.transform.GetChild(0).gameObject);
+                Destroy(spawnedNums.transform.GetChild(1).gameObject);
+            }
+
+        } else if (spawnedNums.transform.childCount > 1) {
         Destroy(spawnedNums.transform.GetChild(0).gameObject);
         Destroy(spawnedNums.transform.GetChild(1).gameObject);
         Destroy(spawnedNums.transform.GetChild(2).gameObject);

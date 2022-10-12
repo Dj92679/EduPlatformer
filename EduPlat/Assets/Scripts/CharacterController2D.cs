@@ -32,7 +32,7 @@ public class CharacterController2D : MonoBehaviour
     public float jumpTime;
 	private float jumpTimeCounter;
 	private bool stoppedJumping;
-	private int keys = 4; 
+	private int keys = 3; 
 
     public float runSpeed = 40f;
 	float horizontalMove = 0f;

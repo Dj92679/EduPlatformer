@@ -32,7 +32,7 @@ public class CharacterController2D : MonoBehaviour
     public float jumpTime;
 	private float jumpTimeCounter;
 	private bool stoppedJumping;
-	private int keys = 5; 
+	private int keys = 4; 
 
     public float runSpeed = 40f;
 	float horizontalMove = 0f;
@@ -40,7 +40,6 @@ public class CharacterController2D : MonoBehaviour
 	
 
 	private Vector3 respawnPoint;
-	public GameObject fallDetector;
 	public Vector3 spacing = new Vector3(-2f, 2f, 0f);
 	public Vector3 spacing2 = new Vector3(2f, 2f, 0f);
 
@@ -225,7 +224,7 @@ public class CharacterController2D : MonoBehaviour
 				}
             }
         }
-		if(collision.gameObject.tag == "Door" && keys == 5 && Input.GetKeyUp("space")) {
+		if(collision.gameObject.tag == "Door" && keys == 5 && Input.GetKeyUp(KeyCode.Return)) {
 			int difficulty = chest.GetComponent<NumberSpawn>().difficulty;
 			int level = door.GetComponent<DoorScript>().level;
 			switch(difficulty) {
@@ -318,8 +317,8 @@ public class CharacterController2D : MonoBehaviour
 					}
 					else {
 						equationText.GetComponent<TMP_Text>().text = "Level Complete! Head towards the house and press the Enter key";
-						Destroy(spawnedNums);
-						Destroy(chest);
+						spawnedNums.SetActive(false);
+						chest.SetActive(false);
 					}
 				}
 			}

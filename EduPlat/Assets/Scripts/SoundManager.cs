@@ -1,11 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Audio;
 
 public class SoundManager : MonoBehaviour
 {
-    public AudioMixerGroup mixer;
     public static AudioClip jump;
     public static AudioClip pickup;
     public static AudioClip solve;

@@ -26,7 +26,7 @@ public class MainMenu : MonoBehaviour
     }
     public void QuitGame()
     {
-        Debug.Log("Application quit");
+        Application.Quit();
     }
 
     public void GoToMediumLevel()

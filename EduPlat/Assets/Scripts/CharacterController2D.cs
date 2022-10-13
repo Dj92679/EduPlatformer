@@ -292,11 +292,6 @@ public class CharacterController2D : MonoBehaviour
 			transform.position = respawnPoint;
 		}
 
-        if (collision.gameObject.tag == "Ground")
-        {
-            capsuleCollider.isTrigger = false;
-        }
-
         if (collision.gameObject.tag == "Chest") {
 			if(numbers.Count == 2 && keys < 5) {
 				Debug.Log("chest has been triggered");

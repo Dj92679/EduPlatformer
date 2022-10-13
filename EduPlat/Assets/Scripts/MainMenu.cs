@@ -10,9 +10,9 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("DifficultySelect");
     }
 
-    public void GoToOptionsMenu()
+    public void GoToCreditsMenu()
     {
-        SceneManager.LoadScene("Options");
+        SceneManager.LoadScene("Credits");
     }
 
     public void GoToTutorialLevel()

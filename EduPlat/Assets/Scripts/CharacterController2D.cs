@@ -47,6 +47,9 @@ public class CharacterController2D : MonoBehaviour
 
 	private void Start()
 	{
+		if (SceneManager.GetActiveScene().name == "Tutorial") {
+			keys = 4;
+		}
         QualitySettings.vSyncCount = 0;
         Application.targetFrameRate = targetFrameRate;
 		rb = GetComponent<Rigidbody2D>();

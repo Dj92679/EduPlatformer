@@ -19,7 +19,7 @@ public class NumberSpawn : MonoBehaviour
     private int[] numbers = new int[151];
     public int solution;
     private List<int> positions;
-    private int[] spawned_numbers = new int[10];
+    private int[] spawned_numbers;
     public string operation;
     public int first;
     public int second;
@@ -43,9 +43,11 @@ public class NumberSpawn : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "Tutorial")
         {
             positions = new List<int>() { 0, 1};
+            spawned_numbers = new int[2];
             Debug.Log("Tutorial Level");
         } else {
             positions = new List<int>() { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            spawned_numbers = new int[10];
         }
         switch(difficulty)
 {

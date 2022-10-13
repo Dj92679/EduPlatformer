@@ -180,13 +180,6 @@ public class CharacterController2D : MonoBehaviour
         }
 	}
 
-	// Makes the character fall by disabling then enabling the collider
-	private IEnumerator Fall()
-	{
-		capsuleCollider.isTrigger = true;
-		yield return new WaitForSeconds(0.3f);
-	}
-
 	private void OnTriggerStay2D(Collider2D collision)
 	{
         if (collision.gameObject.tag == "Number" && Input.GetKeyUp("space"))
@@ -327,17 +320,4 @@ public class CharacterController2D : MonoBehaviour
 			}
 		}
 	}
-
-	private void OnCollisionStay2D(Collision2D other)
-    {
-        if (other.gameObject.tag == "Platform")
-        {
-            if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
-            {
-                // Disables the player collider temporarily
-                StartCoroutine("Fall");
-            }
-        }
-
-    }
 }

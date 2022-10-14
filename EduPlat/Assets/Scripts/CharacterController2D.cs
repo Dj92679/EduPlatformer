@@ -50,7 +50,7 @@ public class CharacterController2D : MonoBehaviour
 		if (SceneManager.GetActiveScene().name == "Tutorial") {
 			keys = 4;
 		}
-        QualitySettings.vSyncCount = 0;
+        QualitySettings.vSyncCount = 1;
         Application.targetFrameRate = targetFrameRate;
 		rb = GetComponent<Rigidbody2D>();
 		animator = GetComponent<Animator>();

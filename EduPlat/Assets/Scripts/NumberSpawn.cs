@@ -68,7 +68,7 @@ public class NumberSpawn : MonoBehaviour
     }
 
     //called to decide on what type of equation will happen. max decides how many operations to consider
-    void OperationGenerator(int max, string[] operations) {
+    void OperationGenerator(int max) {
         operation = operations[Random.Range(0, max)];
     }
 
@@ -89,7 +89,7 @@ public class NumberSpawn : MonoBehaviour
         case 1:
         {
             //switch case for different operators
-            OperationGenerator(2, operations);
+            OperationGenerator(2);
             switch(operation)
             {
                 case "+":

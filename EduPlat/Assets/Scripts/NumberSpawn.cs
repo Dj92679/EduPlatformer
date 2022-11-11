@@ -8,151 +8,105 @@ using UnityEngine.SceneManagement;
 public class NumberSpawn : MonoBehaviour
 {
     //pre-set variables
-    public GameObject nums;
-    public GameObject spawns;
-    public GameObject chestLocations;
-    public GameObject spawnedNums;
-    public GameObject equationText;
-    //Random rand = new Random();
-    private string[] operations = { "+", "-", "x", "/" };
-    public int difficulty;
-    private int[] numbers = new int[151];
-    public int solution;
-    private List<int> positions;
-    private int[] spawned_numbers;
-    public string operation;
-    public int first;
-    public int second;
+    public GameObject nums; //this is a gameObject containing all the prefabs for the numbers in the game. this is important because the prefabs all have a script containing the int value of the number itself which is referred to in CharacterController2D script.
+    public GameObject spawns; //this is the gameObject containing information on where the numbers can spawn
+    public GameObject chestLocations; //this is a gameobject that contains all the chestlocations so the chest can be moved between the positions
+    public GameObject spawnedNums; //this is a gameobject which the spawned numbers will all be children of. they are grouped for easier deletion and re-implementation
+    public GameObject equationText; //this gameobject is the object which has the textbox that displays the equation
+    private string[] operations = { "+", "-", "x", "/" }; //simple list of mathermical operations which is used to decide which operation to use
+    public int difficulty; //this is an int value derived from a manually assigned value on each level
+    public int solution; //this is the value of the solution that the player will have to work towards
+    private List<int> positions; //this is a temp lsit used to decide which position each new number will take
+    private int[] spawned_numbers; //this is the list of numbers that will be spawned
+    public string operation; //this is the operation type that will be decided via a random number generator
+    public int first; //this is the first number that will make the solution
+    public int second; //this is the second number to make the solution
 
     // Start is called before the first frame update
     void Start()
     {
         Debug.Log("Level started");
-        //equationText = this.gameObject.GetComponent<Text>();
         Spawn();
     }
 
+    void Addition(int max) { 
+    //making solution and setting the answers
+    solution = Random.Range(2, 21);
+    first = Random.Range(0, solution + 1);
+    second = solution - first;
 
-    // Update is called once per frame
-    void Update()
+    //adding first and second to array
+    spawned_numbers[0] = first;
+    spawned_numbers[1] = second;
+
+    //setting the rest of the numbers besides the correct answers
+    for (int i = 2; i < spawned_numbers.Length; i++)
     {
+        //loop does not break until new numbers have been checked to not allow for extra solutions
+        bool check = true;
+        while (check)
+        {
+            int checks_failed = 0; //resetting checks
 
+            int num = Random.Range(0, max + 1); //making new random number to test
+            for (int j = 0; j < spawned_numbers.Length; j++)
+            {
+                //enters if statement if number can make solution with any other number
+                if (num + spawned_numbers[j] == solution)
+                {
+                checks_failed++;
+                }
+            }
+            //will only happen if the new number cannot make the answer with any of the other numbers
+            if (checks_failed == 0)
+            {
+                spawned_numbers[i] = num;
+                check = false;
+            }
+        }
+    }
     }
 
+    //called to decide on what type of equation will happen. max decides how many operations to consider
+    void OperationGenerator(int max, string[] operations) {
+        operation = operations[Random.Range(0, max)];
+    }
+
+    //this method is the main function of the script which chooses the operation, 
     public void Spawn() {
         if (SceneManager.GetActiveScene().name == "Tutorial")
         {
-            positions = new List<int>() { 0, 1};
-            spawned_numbers = new int[2];
+            //tutorial only has 2 number spawn gameobjects so array can only have size of 2 otherwise indexoutofarrayerror will occur
+            positions = new List<int>() { 0, 1}; 
+            spawned_numbers = new int[2]; 
             Debug.Log("Tutorial Level");
         } else {
             positions = new List<int>() { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
             spawned_numbers = new int[10];
         }
-        switch(difficulty)
-{
-    case 1:
+    switch(difficulty)
+    {
+        case 1:
         {
             //switch case for different operators
-            operation = operations[Random.Range(0, 2)];
+            OperationGenerator(2, operations);
             switch(operation)
             {
                 case "+":
-                    {
-                        //reporting the equation type to make it more obvious on the console output
-                        //Console.WriteLine("Equation type: " + operation);
-
-                        //making solution and setting the answers
-                        solution = Random.Range(2, 21);
-                        first = Random.Range(0, solution + 1);
-                        second = solution - first;
-
-                        //checking the answer and solutions are working
-                        //Console.WriteLine("Solution: " + solution + "\n" + "Num1: " + first + "\n" + "Num2: " + second);
-
-                        spawned_numbers[0] = first;
-                        spawned_numbers[1] = second;
-
-                        //setting the rest of the numbers besides the correct answers
-                        for (int i = 2; i < spawned_numbers.Length; i++)
-                        {
-                            //loop does not break until new numbers have been checked to not allow for extra solutions
-                            bool check = true;
-                            while (check)
-                            {
-                                int checks_failed = 0;
-                                int num = Random.Range(0, 21);
-                                for (int j = 0; j < spawned_numbers.Length; j++)
-                                {
-                                    if (num + spawned_numbers[j] == solution)
-                                    {
-                                        //Console.WriteLine("check failed");
-                                        checks_failed++;
-                                    }
-                                }
-                                //will only happen if the new number cannot make the answer with any of the other numbers
-                                if (checks_failed == 0)
-                                {
-                                    spawned_numbers[i] = num;
-                                    check = false;
-                                }
-                            }
-                        }
-
-                        //checking the list of numbers is working
-                        for (int k = 0; k < spawned_numbers.Length; k++)
-                        {
-                            //Console.WriteLine(spawned_numbers[k]);
-                        }
-                        break;
-                    }
+                {
+                    Addition(20);
+                    break; 
+                }
 
                 case "-":
-                    {
-                        //Console.WriteLine("Equation type: " + operation);
-
-                        solution = Random.Range(0, 11);
-                        first = Random.Range(solution, 21);
-                        second = first - solution;
-
-                        //Console.WriteLine("Solution: " + solution + "\n" + "Num1: " + first + "\n" + "Num2: " + second);
-
-                        spawned_numbers[0] = first;
-                        spawned_numbers[1] = second;
-
-                        for (int i = 2; i < spawned_numbers.Length; i++)
-                        { 
-                            bool check = true;
-                            while (check)
-                            {
-                                int checks_failed = 0;
-                                int num = Random.Range(0, 21);
-                                for (int j = 0; j < spawned_numbers.Length; j++)
-                                {
-                                    if (num - spawned_numbers[j] == solution || spawned_numbers[j] - num == solution)
-                                    {
-                                        //Console.WriteLine("check failed");
-                                        checks_failed++;
-                                    }
-                                }
-                                if (checks_failed == 0)
-                                {
-                                    spawned_numbers[i] = num;
-                                    check = false;
-                                }
-                            }
-                        }
-
-                        for(int k = 0; k < spawned_numbers.Length; k++)
-                        {
-                            //Console.WriteLine(spawned_numbers[k]);
-                        }
-                        break;
-                    }
+                {
+                    Addition(20);
+                    break;
+                }
             }
             break;
         }
-    case 2:
+        case 2:
         {
             operation = operations[Random.Range(0, 4)];
 
